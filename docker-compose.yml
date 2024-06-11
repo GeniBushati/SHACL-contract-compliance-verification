@@ -1,0 +1,9 @@
+version: "3"
+services:
+  contractshaclact:
+    container_name: contract-shacl-act
+    hostname: contract-shacl-act
+    restart: always
+    build: ./
+    ports:
+      - 5004:5004
