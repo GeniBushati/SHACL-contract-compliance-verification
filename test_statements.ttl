@@ -1,0 +1,3376 @@
+@prefix : <http://ontologies.atb-bremen.de/smashHitCore#> .
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix OntoSensor: <http://mmisw.org/ont/univmemphis/sensor#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix mapper: <http://www.ontotext.com/mapper/> .
+@prefix path: <http://www.ontotext.com/path#> .
+@prefix fibo-fbc-fe-fse: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+@prefix prov-o: <%20https://www.w3.org/TR/prov-o#> .
+@prefix security: <http://ontologies.atb-bremen.de/security#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dpv-gdpr: <http://www.w3.org/ns/dpv-gdpr#> .
+@prefix fibo-fnd-agr-ctr: <https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix gconsent: <https://w3id.org/GConsent#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+@prefix fibo-der-dc-dma: <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/DerivativesMasterAgreements/> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix fibo-fnd-trext-reatr: <https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/REATransactions/> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix dpv: <http://www.w3.org/ns/dpv#> .
+@prefix consent: <http://purl.org/adaptcentre/openscience/ontologies/consent#> .
+@prefix fibo-loan-loant-mloan: <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoanTypes/MortgageLoans/> .
+@prefix LCC: <https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> .
+@prefix campaneo: <http://www.semanticweb.org/CampaNeo/ontologies/2020/4/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix fibo-fnd-plc-loc: <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix fibo-fbc-dae-dbt: <https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+owl:sameAs a owl:ObjectProperty;
+  rdfs:domain owl:Thing;
+  rdfs:range owl:Thing .
+
+rdf:value a owl:AnnotationProperty .
+
+owl:differentFrom a owl:ObjectProperty;
+  rdfs:domain owl:Thing;
+  rdfs:range owl:Thing .
+
+owl:Thing a owl:Class .
+
+<http://ontologies.atb-bremen.de/smashHitCore> a owl:Ontology .
+
+owl:versionIRI a owl:AnnotationProperty;
+  rdfs:domain owl:Ontology;
+  rdfs:range owl:Ontology .
+
+owl:imports a owl:AnnotationProperty;
+  rdfs:domain owl:Ontology;
+  rdfs:range owl:Ontology .
+
+dc:title a owl:AnnotationProperty .
+
+owl:versionInfo a owl:AnnotationProperty;
+  rdfs:domain rdfs:Resource;
+  rdfs:range rdfs:Resource .
+
+grddl:namespaceTransformation a owl:AnnotationProperty .
+
+:RevokedAtTime a owl:AnnotationProperty .
+
+:contractType a owl:AnnotationProperty .
+
+:forPurpose a owl:AnnotationProperty .
+
+:hasRole a owl:AnnotationProperty .
+
+dct:description a owl:AnnotationProperty;
+  rdfs:domain :License .
+
+:License a owl:Class;
+  rdfs:subClassOf owl:Thing, _:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-8218BA8C5B17EABB43A933E2212CE027 .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-8218BA8C5B17EABB43A933E2212CE027 a owl:Restriction .
+
+dct:hasVersion a owl:AnnotationProperty;
+  rdfs:domain :License, fibo-fnd-agr-ctr:Contract, gconsent:Consent .
+
+fibo-fnd-agr-ctr:Contract a owl:Class;
+  rdfs:subClassOf owl:Thing, _:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-84B0E2B5D234F154D114B69FE469D345 .
+
+gconsent:Consent a owl:Class;
+  rdfs:subClassOf owl:Thing, _:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-7B902477E03EDF0B0024893F619287D5 .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-84B0E2B5D234F154D114B69FE469D345 a owl:Restriction .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-7B902477E03EDF0B0024893F619287D5 a owl:Restriction .
+
+dct:identifier a owl:AnnotationProperty .
+
+owl:backwardCompatibleWith a owl:AnnotationProperty;
+  rdfs:domain owl:Ontology;
+  rdfs:range owl:Ontology .
+
+owl:deprecated a owl:AnnotationProperty;
+  rdfs:domain rdfs:Resource;
+  rdfs:range rdfs:Resource .
+
+owl:incompatibleWith a owl:AnnotationProperty;
+  rdfs:domain owl:Ontology;
+  rdfs:range owl:Ontology .
+
+owl:priorVersion a owl:AnnotationProperty;
+  rdfs:domain owl:Ontology;
+  rdfs:range owl:Ontology .
+
+odrl:assignee a owl:AnnotationProperty;
+  rdfs:domain odrl:Policy;
+  rdfs:range prov:Agent .
+
+odrl:Policy a owl:Class;
+  rdfs:subClassOf :InformationEntity .
+
+prov:Agent a owl:Class;
+  rdfs:subClassOf owl:Thing, _:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-4ED805AFF8D8E9A153514F276762DE35 .
+
+:InformationEntity a owl:Class;
+  rdfs:subClassOf owl:Thing .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-4ED805AFF8D8E9A153514F276762DE35 a owl:Restriction .
+
+odrl:assigner a owl:AnnotationProperty;
+  rdfs:domain _:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-BB1B16387D2AD525918ECC883045E659;
+  rdfs:range prov:Agent .
+
+fibo-fnd-agr-ctr:hasExecutionDate a owl:AnnotationProperty .
+
+rdf:HTML a rdfs:Datatype .
+
+<https://www.w3.org/TR/xmlschema11-2/#dateTimeStamp> a rdfs:Datatype .
+
+<fibo-der-drc-ma:hasBeneficiary> a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain fibo-fnd-agr-ctr:Contract;
+  rdfs:range prov:Agent .
+
+:GrantedAtTime a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:subPropertyOf :hasConsentStatus;
+  rdfs:domain gconsent:Consent;
+  rdfs:range :Granted .
+
+:hasConsentStatus a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain gconsent:Consent;
+  rdfs:range :ConsentStatus .
+
+:Granted a owl:Class;
+  rdfs:subClassOf gconsent:StatusValidForProcessing .
+
+:ConsentStatus a owl:Class;
+  rdfs:subClassOf :Status .
+
+gconsent:StatusValidForProcessing a owl:Class;
+  rdfs:subClassOf :ConsentStatus .
+
+:Status a owl:Class;
+  rdfs:subClassOf owl:Thing .
+
+:WithdrawnAtTime a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:subPropertyOf :hasConsentStatus;
+  rdfs:domain gconsent:Consent;
+  rdfs:range gconsent:ConsentStatusWithdrawn .
+
+gconsent:ConsentStatusWithdrawn a owl:Class;
+  rdfs:subClassOf gconsent:StatusInvalidForProcessing .
+
+gconsent:StatusInvalidForProcessing a owl:Class;
+  rdfs:subClassOf :ConsentStatus .
+
+:atCity a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:subPropertyOf :atLocation;
+  rdfs:domain LCC:Location;
+  rdfs:range fibo-fnd-plc-loc:Municipality .
+
+:atLocation a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:subPropertyOf :hasContext;
+  rdfs:domain :License, fibo-fnd-agr-ctr:Contract, gconsent:Consent;
+  rdfs:range LCC:Location .
+
+LCC:Location a owl:Class;
+  rdfs:subClassOf owl:Thing .
+
+fibo-fnd-plc-loc:Municipality a owl:Class;
+  rdfs:subClassOf LCC:GeopoliticalEntity .
+
+:hasContext a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain :License, fibo-fnd-agr-ctr:Contract, gconsent:Consent;
+  rdfs:range LCC:Location, time:TemporalEntity .
+
+LCC:GeopoliticalEntity a owl:Class;
+  rdfs:subClassOf LCC:GeographicRegion .
+
+time:TemporalEntity a owl:Class;
+  rdfs:subClassOf owl:Thing .
+
+LCC:GeographicRegion a owl:Class;
+  rdfs:subClassOf LCC:Location .
+
+:atCountry a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:subPropertyOf :atLocation;
+  rdfs:domain LCC:Location;
+  rdfs:range LCC:Country .
+
+LCC:Country a owl:Class;
+  rdfs:subClassOf LCC:GeopoliticalEntity .
+
+:atDateTime a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:subPropertyOf :hasContext;
+  rdfs:domain :Status;
+  rdfs:range time:TemporalEntity .
+
+:atRegion a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:subPropertyOf :atLocation;
+  rdfs:domain LCC:Location .
+
+:atState a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:subPropertyOf :atLocation;
+  rdfs:domain LCC:Location;
+  rdfs:range LCC:CountrySubdivision .
+
+LCC:CountrySubdivision a owl:Class;
+  rdfs:subClassOf LCC:GeopoliticalEntity .
+
+:categoryBusinessToBusiness a owl:ObjectProperty, owl:NamedIndividual;
+  rdfs:subPropertyOf :hasContractCategory;
+  rdfs:domain :ContractCategory;
+  rdfs:range :BusinessToBusiness .
+
+:hasContractCategory a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain fibo-fnd-agr-ctr:Contract;
+  rdfs:range :ContractCategory .
+
+:ContractCategory a owl:Class;
+  rdfs:subClassOf :InformationEntity .
+
+:BusinessToBusiness a owl:Class;
+  rdfs:subClassOf :ContractCategory .
+
+:categoryBusinessToConsumer a owl:ObjectProperty, owl:NamedIndividual;
+  rdfs:subPropertyOf :hasContractCategory;
+  rdfs:domain :ContractCategory;
+  rdfs:range :BusinessToConsumer .
+
+:BusinessToConsumer a owl:Class;
+  rdfs:subClassOf :ContractCategory .
+
+:forDataProcessing a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain gconsent:Consent;
+  rdfs:range dpv:Processing .
+
+dpv:Processing a owl:Class;
+  rdfs:subClassOf owl:Thing .
+
+:hasContactPoint a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain prov:Agent;
+  rdfs:range dpv:Contact .
+
+dpv:Contact a owl:Class;
+  rdfs:subClassOf dpv:Tracking .
+
+dpv:Tracking a owl:Class;
+  rdfs:subClassOf dpv:PersonalDataCategory .
+
+dpv:PersonalDataCategory a owl:Class;
+  rdfs:subClassOf :InformationEntity .
+
+:hasContractStatus a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain fibo-fnd-agr-ctr:Contract;
+  rdfs:range :ContractStatus .
+
+:ContractStatus a owl:Class;
+  rdfs:subClassOf :Status .
+
+:hasContractType a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain fibo-fnd-agr-ctr:Contract .
+
+:hasCountry a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain LCC:Location;
+  rdfs:range LCC:Country .
+
+:hasCreationDate a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain fibo-fnd-agr-ctr:Contract;
+  rdfs:range time:TemporalEntity .
+
+:hasDataController a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain fibo-fnd-agr-ctr:Contract, gconsent:Consent;
+  rdfs:range prov:Agent .
+
+:hasDataProcessor a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain fibo-fnd-agr-ctr:Contract, gconsent:Consent;
+  rdfs:range prov:Agent .
+
+:hasDataProtectionOfficer a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain fibo-fnd-agr-ctr:Contract, gconsent:Consent;
+  rdfs:range prov:Agent .
+
+:hasDataSubject a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain fibo-fnd-agr-ctr:Contract, gconsent:Consent;
+  rdfs:range prov:Agent .
+
+:hasEmail a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain prov:Agent;
+  rdfs:range dpv:EmailAddress .
+
+dpv:EmailAddress a owl:Class;
+  rdfs:subClassOf dpv:Contact .
+
+:hasEndDate a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain fibo-fnd-agr-ctr:Contract;
+  rdfs:range time:TemporalEntity .
+
+:hasExpirationDate a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:subPropertyOf :hasContext;
+  rdfs:domain fibo-fnd-agr-ctr:Contract, gconsent:Consent, :Obligation;
+  rdfs:range time:Instant .
+
+:Obligation a owl:Class;
+  rdfs:subClassOf :TermsAndConditions .
+
+time:Instant a owl:Class;
+  rdfs:subClassOf time:TemporalEntity, _:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-26FD455F9C72A7918658E35A81FCF5C5 .
+
+:TermsAndConditions a owl:Class;
+  rdfs:subClassOf :InformationEntity .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-26FD455F9C72A7918658E35A81FCF5C5 a owl:Restriction .
+
+:hasHash a owl:ObjectProperty, owl:FunctionalProperty, owl:DatatypeProperty;
+  rdfs:domain dpv:Processing, :SensorDataCategory, dcat:Resource, dpv:DataSource .
+
+:SensorDataCategory a owl:Class;
+  rdfs:subClassOf :InformationEntity .
+
+dcat:Resource a owl:Class;
+  rdfs:subClassOf owl:Thing .
+
+dpv:DataSource a owl:Class;
+  rdfs:subClassOf owl:Thing .
+
+:hasID a owl:ObjectProperty, owl:FunctionalProperty, owl:DatatypeProperty;
+  rdfs:domain prov:Agent .
+
+:hasMetadata a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain dcat:Resource;
+  rdfs:range :InformationEntity .
+
+:hasMinimumDuration a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain fibo-fnd-agr-ctr:Contract;
+  rdfs:range time:Interval .
+
+time:Interval a owl:Class;
+  rdfs:subClassOf time:TemporalEntity, _:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-2331393FAB9AD1F3127662DCA63FF0E5 .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-2331393FAB9AD1F3127662DCA63FF0E5 a owl:Restriction .
+
+:hasName a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain prov:Agent .
+
+:hasOrganization a owl:ObjectProperty;
+  rdfs:domain fibo-fnd-agr-ctr:Contract;
+  rdfs:range prov:Organization .
+
+prov:Organization a owl:Class;
+  rdfs:subClassOf prov:Agent .
+
+:hasPassword a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:subPropertyOf :hasPersonalData;
+  rdfs:domain prov:Agent;
+  rdfs:range dpv:Password .
+
+:hasPersonalData a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain prov:Agent;
+  rdfs:range dpv:PersonalDataCategory .
+
+dpv:Password a owl:Class;
+  rdfs:subClassOf dpv:Authenticating, _:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-4CE6645106839567F07B9C6195E69EB1 .
+
+dpv:Authenticating a owl:Class;
+  rdfs:subClassOf dpv:Internal .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-4CE6645106839567F07B9C6195E69EB1 a owl:Restriction .
+
+dpv:Internal a owl:Class;
+  rdfs:subClassOf dpv:PersonalDataCategory .
+
+:hasPostalAddress a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain prov:Agent, dcat:Role;
+  rdfs:range :PostalAddress .
+
+dcat:Role a owl:Class;
+  rdfs:subClassOf owl:Thing .
+
+:PostalAddress a owl:Class;
+  rdfs:subClassOf fibo-fnd-plc-loc:Municipality .
+
+:hasPostalCode a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain fibo-fnd-plc-loc:Municipality, :PostalAddress;
+  rdfs:range :PostalCode .
+
+:PostalCode a owl:Class;
+  rdfs:subClassOf fibo-fnd-plc-loc:Municipality, _:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-3088DD894409457B7D6DFA816987CD8E .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-3088DD894409457B7D6DFA816987CD8E a owl:Restriction .
+
+:hasPurposePreference a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain prov:Agent;
+  rdfs:range dpv:Purpose .
+
+dpv:Purpose a owl:Class;
+  rdfs:subClassOf owl:Thing .
+
+:hasRetentionDate a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain dpv:PersonalDataCategory;
+  rdfs:range time:Instant .
+
+:hasSensorDataCategory a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain OntoSensor:Sensor;
+  rdfs:range :SensorDataCategory .
+
+OntoSensor:Sensor a owl:Class;
+  rdfs:subClassOf :Device .
+
+:Device a owl:Class;
+  rdfs:subClassOf dpv:DataSource .
+
+:hasStates a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain :Obligation;
+  rdfs:range :ObligationStates .
+
+:ObligationStates a owl:Class .
+
+:hasTelephone a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain prov:Agent;
+  rdfs:range dpv:TelephoneNumber .
+
+dpv:TelephoneNumber a owl:Class;
+  rdfs:subClassOf dpv:Contact, _:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-13A2E6D50C2121394F4F068A71538362 .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-13A2E6D50C2121394F4F068A71538362 a owl:Restriction .
+
+:hasTermTypes a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasTermsAndConditions;
+  rdfs:domain fibo-fnd-agr-ctr:Contract;
+  rdfs:range :TermTypes .
+
+:hasTermsAndConditions a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain fibo-fnd-agr-ctr:Contract;
+  rdfs:range :TermsAndConditions .
+
+:TermTypes a owl:Class;
+  rdfs:subClassOf :TermsAndConditions .
+
+:hasTerritory a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain LCC:Location;
+  rdfs:range LCC:Territory .
+
+LCC:Territory a owl:Class;
+  rdfs:subClassOf LCC:GeopoliticalEntity .
+
+:hasUsername a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:subPropertyOf :hasPersonalData;
+  rdfs:domain prov:Agent;
+  rdfs:range dpv:Username .
+
+dpv:Username a owl:Class;
+  rdfs:subClassOf dpv:Identifying, _:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-3BC221D2C77A8EC0194ABA8B1C0DFF2A .
+
+dpv:Identifying a owl:Class;
+  rdfs:subClassOf dpv:External .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-3BC221D2C77A8EC0194ABA8B1C0DFF2A a owl:Restriction .
+
+dpv:External a owl:Class;
+  rdfs:subClassOf dpv:PersonalDataCategory .
+
+:inMedium a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:subPropertyOf :hasContext;
+  rdfs:domain fibo-fnd-agr-ctr:Contract, gconsent:Consent;
+  rdfs:range gconsent:Medium .
+
+gconsent:Medium a owl:Class;
+  rdfs:subClassOf owl:Thing .
+
+:isAboutData a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain gconsent:Consent;
+  rdfs:range dcat:Resource, dpv:DataSource .
+
+:isProvidedBy a owl:ObjectProperty, owl:FunctionalProperty, owl:AsymmetricProperty,
+    owl:IrreflexiveProperty;
+  rdfs:domain gconsent:Consent;
+  rdfs:range prov:Agent .
+
+:requestedBy a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain gconsent:Consent;
+  rdfs:range prov:Agent .
+
+:stateFulfilled a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasStates;
+  rdfs:domain :ObligationStates;
+  rdfs:range :FulfilledState .
+
+:FulfilledState a owl:Class;
+  rdfs:subClassOf :ObligationStates .
+
+:stateInvalid a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasStates;
+  rdfs:domain :ObligationStates;
+  rdfs:range :InvalidState .
+
+:InvalidState a owl:Class;
+  rdfs:subClassOf :ObligationStates .
+
+:statePending a owl:ObjectProperty, owl:NamedIndividual;
+  rdfs:subPropertyOf :hasStates;
+  rdfs:domain :ObligationStates;
+  rdfs:range :PendingState .
+
+:PendingState a owl:Class;
+  rdfs:subClassOf :ObligationStates .
+
+:stateViolated a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasStates;
+  rdfs:domain :ObligationStates;
+  rdfs:range :ViolatedState .
+
+:ViolatedState a owl:Class;
+  rdfs:subClassOf :ObligationStates .
+
+:statusCreated a owl:ObjectProperty, owl:FunctionalProperty, owl:NamedIndividual;
+  rdfs:subPropertyOf :hasContractStatus;
+  rdfs:domain fibo-fnd-agr-ctr:Contract;
+  rdfs:range :Created .
+
+:Created a owl:Class;
+  rdfs:subClassOf :ContractStatus .
+
+:statusExpired a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:subPropertyOf :hasContractStatus;
+  rdfs:domain fibo-fnd-agr-ctr:Contract;
+  rdfs:range :Expire .
+
+:Expire a owl:Class;
+  rdfs:subClassOf :ContractStatus .
+
+:statusPending a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:subPropertyOf :hasContractStatus;
+  rdfs:domain fibo-fnd-agr-ctr:Contract;
+  rdfs:range :Pending .
+
+:Pending a owl:Class;
+  rdfs:subClassOf :ContractStatus .
+
+:statusSigned a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:subPropertyOf :hasContractStatus;
+  rdfs:domain fibo-fnd-agr-ctr:Contract;
+  rdfs:range :Signed .
+
+:Signed a owl:Class;
+  rdfs:subClassOf :ContractStatus .
+
+:statusTerminated a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:subPropertyOf :hasContractStatus;
+  rdfs:domain fibo-fnd-agr-ctr:Contract;
+  rdfs:range :Terminated .
+
+:Terminated a owl:Class;
+  rdfs:subClassOf :ContractStatus .
+
+:statusUpdated a owl:ObjectProperty, owl:NamedIndividual;
+  rdfs:subPropertyOf :hasContractStatus;
+  rdfs:domain fibo-fnd-agr-ctr:Contract;
+  rdfs:range :Updated .
+
+:Updated a owl:Class;
+  rdfs:subClassOf :ContractStatus .
+
+dct:creator a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain dcat:Resource;
+  rdfs:range prov:Agent .
+
+dct:type a owl:ObjectProperty, owl:FunctionalProperty, owl:DatatypeProperty;
+  rdfs:domain dcat:Resource;
+  rdfs:range xsd:string, dcat:Resource .
+
+rdf:hasInputData a owl:SymmetricProperty, owl:TransitiveProperty, owl:ObjectProperty;
+  rdfs:domain dpv:Processing;
+  rdfs:range :SensorDataCategory, dcat:Resource .
+
+rdf:hasOutputData a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain dpv:Processing;
+  rdfs:range :SensorDataCategory, dcat:Resource .
+
+rdf:hasType a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain prov:Agent;
+  rdfs:range prov:Organization, prov:Person .
+
+prov:Person a owl:Class;
+  rdfs:subClassOf prov:Agent .
+
+prov:SoftwareAgent a owl:Class;
+  rdfs:subClassOf prov:Agent .
+
+owl:bottomObjectProperty a owl:ObjectProperty;
+  rdfs:domain owl:Thing .
+
+owl:sourceIndividual a owl:ObjectProperty .
+
+owl:targetIndividual a owl:ObjectProperty .
+
+owl:topObjectProperty a owl:ObjectProperty;
+  rdfs:domain owl:Thing .
+
+time:hasBeginning a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain time:TemporalEntity .
+
+time:hasEnd a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain time:TemporalEntity .
+
+dcat:bbox a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain dcat:Resource .
+
+dcat:distribution a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain dcat:Dataset .
+
+dcat:Dataset a owl:Class;
+  rdfs:subClassOf dcat:Resource .
+
+dcat:Distribution a owl:Class;
+  rdfs:subClassOf dcat:Resource .
+
+dcat:hadRole a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain fibo-fnd-agr-ctr:Contract, prov:Agent .
+
+dpv:hasPersonalDataCategory a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain :PersonalData .
+
+:PersonalData a owl:Class;
+  rdfs:subClassOf dcat:Resource .
+
+dpv:hasPurpose a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain gconsent:Consent .
+
+prov:actedOnBehalfOf a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:subPropertyOf prov:wasInfluencedBy;
+  rdfs:domain prov:Agent .
+
+prov:wasInfluencedBy a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain fibo-fnd-agr-ctr:Contract .
+
+prov:wasGeneratedBy a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain dcat:Dataset .
+
+fibo-fnd-agr-ctr:hasContractualElement a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain fibo-fnd-agr-ctr:Contract .
+
+fibo-fnd-agr-ctr:hasEffectiveDate a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain fibo-fnd-agr-ctr:Contract .
+
+gconsent:hasRole a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain fibo-fnd-agr-ctr:Contract, prov:Agent .
+
+gconsent:isStatusForConsent a owl:ObjectProperty, owl:InverseFunctionalProperty;
+  rdfs:domain :ConsentStatus .
+
+:ConsentID a owl:DatatypeProperty .
+
+:agentID a owl:FunctionalProperty, owl:DatatypeProperty;
+  rdfs:subPropertyOf :identifier;
+  rdfs:domain prov:Agent .
+
+:identifier a owl:FunctionalProperty, owl:DatatypeProperty;
+  rdfs:domain :License, fibo-fnd-agr-ctr:Contract, gconsent:Consent .
+
+:companyID a owl:DatatypeProperty;
+  rdfs:subPropertyOf :identifier;
+  rdfs:domain prov:Organization .
+
+:consentID a owl:FunctionalProperty, owl:DatatypeProperty;
+  rdfs:subPropertyOf :identifier;
+  rdfs:domain gconsent:Consent .
+
+:contractID a owl:FunctionalProperty, owl:DatatypeProperty;
+  rdfs:subPropertyOf :identifier;
+  rdfs:domain fibo-fnd-agr-ctr:Contract .
+
+:contractorID a owl:DatatypeProperty;
+  rdfs:subPropertyOf :identifier;
+  rdfs:domain prov:Agent .
+
+:hasCompany a owl:DatatypeProperty;
+  rdfs:domain prov:Organization .
+
+:hasContractors a owl:DatatypeProperty;
+  rdfs:domain prov:Agent .
+
+:hasObligations a owl:DatatypeProperty;
+  rdfs:domain :Obligation .
+
+:hasSignature a owl:DatatypeProperty;
+  rdfs:domain prov:Agent .
+
+:hasSignatures a owl:DatatypeProperty;
+  rdfs:domain fibo-fnd-agr-ctr:Contract .
+
+:hasTerms a owl:DatatypeProperty;
+  rdfs:domain :TermsAndConditions .
+
+:hasVATIN a owl:DatatypeProperty;
+  rdfs:domain prov:Agent .
+
+:hash a owl:FunctionalProperty, owl:DatatypeProperty;
+  rdfs:subPropertyOf :identifier .
+
+:licenseID a owl:FunctionalProperty, owl:DatatypeProperty;
+  rdfs:subPropertyOf :identifier;
+  rdfs:domain :License .
+
+:obligationID a owl:DatatypeProperty;
+  rdfs:subPropertyOf :identifier;
+  rdfs:domain :Obligation .
+
+:obligationStateID a owl:DatatypeProperty;
+  rdfs:subPropertyOf :identifier;
+  rdfs:domain :ObligationStates .
+
+:signatureID a owl:DatatypeProperty;
+  rdfs:subPropertyOf :identifier .
+
+:termID a owl:DatatypeProperty;
+  rdfs:subPropertyOf :identifier;
+  rdfs:domain :TermsAndConditions .
+
+:termTypeID a owl:DatatypeProperty;
+  rdfs:subPropertyOf :identifier;
+  rdfs:domain :TermTypes .
+
+dct:accessRights a owl:FunctionalProperty, owl:DatatypeProperty;
+  rdfs:domain dcat:Resource .
+
+dct:format a owl:FunctionalProperty, owl:DatatypeProperty;
+  rdfs:domain dcat:Resource .
+
+dct:issued a owl:FunctionalProperty, owl:DatatypeProperty;
+  rdfs:domain dcat:Distribution .
+
+dct:language a owl:FunctionalProperty, owl:DatatypeProperty;
+  rdfs:domain dcat:Resource .
+
+dct:modified a owl:FunctionalProperty, owl:DatatypeProperty;
+  rdfs:domain dcat:Resource .
+
+dct:rights a owl:FunctionalProperty, owl:DatatypeProperty;
+  rdfs:domain dcat:Resource .
+
+dct:title a owl:FunctionalProperty, owl:DatatypeProperty;
+  rdfs:domain dcat:Resource .
+
+owl:bottomDataProperty a owl:DatatypeProperty;
+  rdfs:domain owl:Thing .
+
+owl:cardinality a owl:DatatypeProperty .
+
+owl:maxCardinality a owl:DatatypeProperty .
+
+owl:maxQualifiedCardinality a owl:DatatypeProperty .
+
+owl:minCardinality a owl:DatatypeProperty .
+
+owl:minQualifiedCardinality a owl:DatatypeProperty .
+
+owl:qualifiedCardinality a owl:DatatypeProperty .
+
+owl:topDataProperty a owl:DatatypeProperty .
+
+LCC:hasLatitude a owl:DatatypeProperty .
+
+LCC:hasLongitude a owl:DatatypeProperty .
+
+LCC:hasMaximumLatitude a owl:DatatypeProperty;
+  rdfs:subPropertyOf LCC:hasLatitude .
+
+LCC:hasMaximumLongitude a owl:DatatypeProperty;
+  rdfs:subPropertyOf LCC:hasLongitude .
+
+LCC:hasMinimumLatitude a owl:DatatypeProperty;
+  rdfs:subPropertyOf LCC:hasLatitude .
+
+LCC:hasMinimumLongitude a owl:DatatypeProperty;
+  rdfs:subPropertyOf LCC:hasLongitude .
+
+OntoSensor:GPS a owl:Class;
+  rdfs:subClassOf OntoSensor:Sensor, _:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-EA0EB2989D595D099A892A83DBEA5499,
+    _:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-C1804C5526C71D298BEF7357F9D032A1 .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-EA0EB2989D595D099A892A83DBEA5499 a owl:Restriction .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-C1804C5526C71D298BEF7357F9D032A1 a owl:Restriction .
+
+OntoSensor:Humidity a owl:Class;
+  rdfs:subClassOf OntoSensor:Sensor .
+
+OntoSensor:Motion a owl:Class;
+  rdfs:subClassOf OntoSensor:Sensor .
+
+OntoSensor:Orientation a owl:Class;
+  rdfs:subClassOf OntoSensor:Sensor .
+
+:AcousticDetector a owl:Class;
+  rdfs:subClassOf OntoSensor:Sensor .
+
+:AirData a owl:Class;
+  rdfs:subClassOf :SensorDataCategory .
+
+:AirPollutionData a owl:Class;
+  rdfs:subClassOf :AirData .
+
+:AirPollutionSensor a owl:Class;
+  rdfs:subClassOf OntoSensor:Sensor .
+
+:BuildingData a owl:Class;
+  rdfs:subClassOf :SensorDataCategory .
+
+:CarData a owl:Class;
+  rdfs:subClassOf :SensorDataCategory .
+
+:CharityOrganisation a owl:Class;
+  rdfs:subClassOf campaneo:NonProfitOrganisation .
+
+campaneo:NonProfitOrganisation a owl:Class;
+  rdfs:subClassOf prov:Organization .
+
+:DataController a owl:Class;
+  rdfs:subClassOf dcat:Role .
+
+:DataProcessor a owl:Class;
+  rdfs:subClassOf dcat:Role .
+
+:DataProtectionOfficer a owl:Class;
+  rdfs:subClassOf dcat:Role .
+
+:DataSubject a owl:Class;
+  rdfs:subClassOf dcat:Role .
+
+:InductiveLoopDetector a owl:Class;
+  rdfs:subClassOf OntoSensor:Sensor .
+
+:Magnetometer a owl:Class;
+  rdfs:subClassOf OntoSensor:Sensor .
+
+:MicroLoop a owl:Class;
+  rdfs:subClassOf :Magnetometer .
+
+:MicrowaveRadarDetector a owl:Class;
+  rdfs:subClassOf OntoSensor:Sensor .
+
+:PhotoelectricSensor a owl:Class;
+  rdfs:subClassOf OntoSensor:Sensor .
+
+:ProfitPrganisation a owl:Class;
+  rdfs:subClassOf prov:Organization .
+
+:Renewed a owl:Class;
+  rdfs:subClassOf :ContractStatus .
+
+:RoadData a owl:Class;
+  rdfs:subClassOf :SensorDataCategory .
+
+:SensorData a owl:Class;
+  rdfs:subClassOf dcat:Resource .
+
+:Signature a owl:Class;
+  rdfs:subClassOf :InformationEntity .
+
+:Source a owl:Class;
+  rdfs:subClassOf :InformationEntity .
+
+:StorageLocation a owl:Class;
+  rdfs:subClassOf LCC:Location, _:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-8F45528F9178E716F8C9C65EAF0D7E4B .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-8F45528F9178E716F8C9C65EAF0D7E4B a owl:Restriction .
+
+:WirelessMagnetometers a owl:Class;
+  rdfs:subClassOf :Magnetometer .
+
+consent:AppBased a owl:Class, owl:NamedIndividual;
+  rdfs:subClassOf gconsent:Medium .
+
+consent:Audio a owl:Class;
+  rdfs:subClassOf gconsent:Medium .
+
+consent:OnlineForm a owl:Class;
+  rdfs:subClassOf gconsent:Medium .
+
+consent:OnlineOptInOption a owl:Class;
+  rdfs:subClassOf gconsent:Medium .
+
+consent:Paper a owl:Class;
+  rdfs:subClassOf gconsent:Medium .
+
+consent:Video a owl:Class;
+  rdfs:subClassOf gconsent:Medium .
+
+campaneo:AutomobileOrganisation a owl:Class;
+  rdfs:subClassOf :ProfitPrganisation .
+
+campaneo:ConstructionOrganisation a owl:Class;
+  rdfs:subClassOf :ProfitPrganisation .
+
+campaneo:EducationalOgranisation a owl:Class;
+  rdfs:subClassOf prov:Organization .
+
+campaneo:GovernmentOrganisation a owl:Class;
+  rdfs:subClassOf prov:Organization .
+
+campaneo:University a owl:Class;
+  rdfs:subClassOf campaneo:EducationalOgranisation .
+
+dcat:Catalog a owl:Class;
+  rdfs:subClassOf dcat:Resource .
+
+dpv:AcademicResearch a owl:Class;
+  rdfs:subClassOf dpv:ResearchAndDevelopment .
+
+dpv:ResearchAndDevelopment a owl:Class;
+  rdfs:subClassOf dpv:Purpose .
+
+dpv:AccessControl a owl:Class;
+  rdfs:subClassOf dpv:Security .
+
+dpv:Security a owl:Class;
+  rdfs:subClassOf dpv:Purpose .
+
+dpv:Adapt a owl:Class;
+  rdfs:subClassOf dpv:Processing .
+
+dpv:Align a owl:Class;
+  rdfs:subClassOf dpv:Processing .
+
+dpv:Alter a owl:Class;
+  rdfs:subClassOf dpv:Processing .
+
+dpv:Collect a owl:Class;
+  rdfs:subClassOf dpv:Processing .
+
+dpv:Combine a owl:Class;
+  rdfs:subClassOf dpv:Processing .
+
+dpv:CommercialInterest a owl:Class;
+  rdfs:subClassOf dpv:Purpose .
+
+dpv:CommercialResearch a owl:Class;
+  rdfs:subClassOf dpv:ResearchAndDevelopment .
+
+dpv:Consult a owl:Class;
+  rdfs:subClassOf dpv:Processing .
+
+dpv:CreateEventRecommendations a owl:Class;
+  rdfs:subClassOf dpv:CreatePersonalizedRecommendations .
+
+dpv:CreatePersonalizedRecommendations a owl:Class;
+  rdfs:subClassOf dpv:ServicePersonalization .
+
+dpv:ServicePersonalization a owl:Class;
+  rdfs:subClassOf dpv:Purpose .
+
+dpv:CreateProductRecommendations a owl:Class;
+  rdfs:subClassOf dpv:CreatePersonalizedRecommendations .
+
+dpv:CustomerCare a owl:Class;
+  rdfs:subClassOf dpv:ServiceProvision .
+
+dpv:ServiceProvision a owl:Class;
+  rdfs:subClassOf dpv:Purpose .
+
+dpv:DeliveryOfGoods a owl:Class;
+  rdfs:subClassOf dpv:ServiceProvision .
+
+dpv:Destruct a owl:Class;
+  rdfs:subClassOf dpv:Processing .
+
+dpv:DiscloseByTransmission a owl:Class;
+  rdfs:subClassOf dpv:Processing .
+
+dpv:Disseminate a owl:Class;
+  rdfs:subClassOf dpv:Processing .
+
+dpv:Erase a owl:Class;
+  rdfs:subClassOf dpv:Processing .
+
+dpv:Financial a owl:Class;
+  rdfs:subClassOf dpv:PersonalDataCategory .
+
+dpv:FraudPreventionAndDetection a owl:Class;
+  rdfs:subClassOf dpv:Security .
+
+dpv:IdentityVerification a owl:Class;
+  rdfs:subClassOf dpv:Security .
+
+dpv:ImproveExistingProductsAndServices a owl:Class;
+  rdfs:subClassOf dpv:OptimisationForController .
+
+dpv:OptimisationForController a owl:Class;
+  rdfs:subClassOf dpv:ServiceOptimization .
+
+dpv:ServiceOptimization a owl:Class;
+  rdfs:subClassOf dpv:Purpose .
+
+dpv:ImproveInternalCRMProcesses a owl:Class;
+  rdfs:subClassOf dpv:OptimisationForController .
+
+dpv:IncreaseServiceRobustness a owl:Class;
+  rdfs:subClassOf dpv:OptimisationForController .
+
+dpv:InternalResourceOptimisation a owl:Class;
+  rdfs:subClassOf dpv:OptimisationForController .
+
+dpv:NonCommercialResearch a owl:Class;
+  rdfs:subClassOf dpv:ResearchAndDevelopment .
+
+dpv:OfficialID a owl:Class;
+  rdfs:subClassOf dpv:Identifying, _:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-6F5C7CA3D8F0FCA3A688B87CE9E12C72,
+    _:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-403417950F6BBF7DD8680337A4777406 .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-6F5C7CA3D8F0FCA3A688B87CE9E12C72 a owl:Restriction .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-403417950F6BBF7DD8680337A4777406 a owl:Restriction .
+
+dpv:OptimisationForConsumer a owl:Class;
+  rdfs:subClassOf dpv:ServiceOptimization .
+
+dpv:OptimiseUserInterface a owl:Class;
+  rdfs:subClassOf dpv:OptimisationForConsumer .
+
+dpv:Organise a owl:Class;
+  rdfs:subClassOf dpv:Processing .
+
+dpv:Ownership a owl:Class;
+  rdfs:subClassOf dpv:Financial .
+
+dpv:PersonalisedBenefits a owl:Class;
+  rdfs:subClassOf dpv:ServicePersonalization .
+
+dpv:Preference a owl:Class;
+  rdfs:subClassOf dpv:Internal .
+
+dpv:PrivacyPreference a owl:Class;
+  rdfs:subClassOf dpv:Preference .
+
+dpv:Record a owl:Class;
+  rdfs:subClassOf dpv:Processing .
+
+dpv:Restrict a owl:Class;
+  rdfs:subClassOf dpv:Processing .
+
+dpv:Retrieve a owl:Class;
+  rdfs:subClassOf dpv:Processing .
+
+dpv:Risk a owl:Class;
+  rdfs:subClassOf owl:Thing .
+
+dpv:SellDataToThirdParties a owl:Class;
+  rdfs:subClassOf dpv:CommercialInterest .
+
+dpv:SellInsightsFromData a owl:Class;
+  rdfs:subClassOf dpv:CommercialInterest .
+
+dpv:SellProductsToDataSubject a owl:Class;
+  rdfs:subClassOf dpv:CommercialInterest .
+
+dpv:SellTargettedAdvertisements a owl:Class;
+  rdfs:subClassOf dpv:CommercialInterest .
+
+dpv:Share a owl:Class;
+  rdfs:subClassOf dpv:Processing .
+
+dpv:Store a owl:Class;
+  rdfs:subClassOf dpv:Processing .
+
+dpv:Structure a owl:Class;
+  rdfs:subClassOf dpv:Processing .
+
+dpv:UID a owl:Class;
+  rdfs:subClassOf dpv:Identifying, _:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-AE1B5C6984C82753FB9170963AA18076 .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-AE1B5C6984C82753FB9170963AA18076 a owl:Restriction .
+
+dpv:Use a owl:Class;
+  rdfs:subClassOf dpv:Processing .
+
+dpv:UserInterfacePersonalisation a owl:Class;
+  rdfs:subClassOf dpv:ServicePersonalization .
+
+odrl:Duty a owl:Class;
+  rdfs:subClassOf odrl:Rule .
+
+odrl:Rule a owl:Class;
+  rdfs:subClassOf odrl:Policy .
+
+odrl:Permission a owl:Class;
+  rdfs:subClassOf odrl:Rule .
+
+<https://schema.org/birthDate> a owl:Class;
+  rdfs:subClassOf dpv:Identifying, _:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-1A2A774B8FF22BFC556901639AE7B2BD .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-1A2A774B8FF22BFC556901639AE7B2BD a owl:Restriction .
+
+fibo-fbc-fe-fse:InsuranceCompany a owl:Class;
+  rdfs:subClassOf :ProfitPrganisation .
+
+fibo-fnd-agr-ctr:MutualContractualAgreement a owl:Class;
+  rdfs:subClassOf fibo-fnd-agr-ctr:Contract .
+
+:cm_c487000a-2851-11ed-ae8f-f11f24693005 a prov:Organization .
+
+:cm_e801743e-2851-11ed-ae8f-f11f24693005 a owl:NamedIndividual, prov:Organization .
+
+:fulfilmentDate a owl:ObjectProperty;
+  rdfs:domain :Obligation .
+
+:fulfillmentDate a owl:AnnotationProperty .
+
+:hasContractIdB2C a owl:DatatypeProperty;
+  rdfs:domain :Obligation .
+
+:term_type_8cdb028c-2e96-11ed-be7d-3f8589292a29 a :TermTypes .
+
+:c_096dc6f4-2e97-11ed-be7d-3f8589292a29 a prov:Agent, owl:NamedIndividual .
+
+:c_356d371c-2e97-11ed-be7d-3f8589292a29 a prov:Agent, owl:NamedIndividual .
+
+:c_6a094420-2e97-11ed-be7d-3f8589292a29 a prov:Agent .
+
+:ob_c115e70a-2e97-11ed-be7d-3f8589292a29 a owl:NamedIndividual, :Obligation .
+
+:ob_d1cf3f7e-2e97-11ed-be7d-3f8589292a29 a owl:NamedIndividual, :Obligation .
+
+:ob_1e5293a0-2e98-11ed-be7d-3f8589292a29 a owl:NamedIndividual, :Obligation .
+
+:ob_2ad5cb10-2e98-11ed-be7d-3f8589292a29 a owl:NamedIndividual, :Obligation .
+
+:term_b3dfd144-2e98-11ed-be7d-3f8589292a29 a :TermsAndConditions .
+
+:term_d6562ebc-2e98-11ed-be7d-3f8589292a29 a owl:NamedIndividual, :TermsAndConditions .
+
+:sig_fe4e269a-2e98-11ed-be7d-3f8589292a29 a owl:NamedIndividual, :Signature .
+
+:sig_0d930c10-2e99-11ed-be7d-3f8589292a29 a owl:NamedIndividual, :Signature .
+
+:sig_1c5e38e6-2e99-11ed-be7d-3f8589292a29 a owl:NamedIndividual, :Signature .
+
+
+:contb2b_e45dc546-2e9e-11ed-be7d-3f8589292a29 a fibo-fnd-agr-ctr:Contract, owl:NamedIndividual .
+
+:statusViolated a owl:ObjectProperty, owl:NamedIndividual;
+  rdfs:subPropertyOf :hasContractStatus .
+
+:Violated a owl:Class;
+  rdfs:subClassOf :ContractStatus .
+
+:c_32c4336e-2ed1-11ed-be7d-3f8589292a29 a prov:Agent .
+
+:c_534882e8-2ed1-11ed-be7d-3f8589292a29 a prov:Agent .
+
+:c_729c70aa-2ed1-11ed-be7d-3f8589292a29 a prov:Agent .
+
+:sig_86020f1a-2ed1-11ed-be7d-3f8589292a29 a :Signature .
+
+:sig_94bb8c66-2ed1-11ed-be7d-3f8589292a29 a :Signature .
+
+:sig_a433a476-2ed1-11ed-be7d-3f8589292a29 a :Signature .
+
+
+
+
+
+:term_e73a4a6c-2ed2-11ed-be7d-3f8589292a29 a :TermsAndConditions .
+
+
+:ob_92c7a31a-2ed4-11ed-be7d-3f8589292a29 a :Obligation .
+
+:ob_9e2bb1ce-2ed4-11ed-be7d-3f8589292a29 a :Obligation .
+
+:term_e271c6de-2ed4-11ed-be7d-3f8589292a29 a :TermsAndConditions .
+
+:c_43eecc50-2f51-11ed-be7d-3f8589292a29 a prov:Agent .
+
+:term_type_4412c812-2f51-11ed-be7d-3f8589292a29 a :TermTypes .
+
+
+:term_87edc15e-2f51-11ed-be7d-3f8589292a29 a :TermsAndConditions .
+
+:term_type_87f83652-2f51-11ed-be7d-3f8589292a29 a :TermTypes .
+
+
+:term_20e73fb6-2f52-11ed-be7d-3f8589292a29 a :TermsAndConditions .
+
+:term_type_20f1123e-2f52-11ed-be7d-3f8589292a29 a :TermTypes .
+
+
+:term_4276daf6-2f52-11ed-be7d-3f8589292a29 a :TermsAndConditions .
+
+:term_type_428125a6-2f52-11ed-be7d-3f8589292a29 a :TermTypes .
+
+:contb2c_b67ca822-2f52-11ed-be7d-3f8589292a29 a fibo-fnd-agr-ctr:Contract .
+
+:term_b6a49864-2f52-11ed-be7d-3f8589292a29 a :TermsAndConditions .
+
+:term_type_b6afbdde-2f52-11ed-be7d-3f8589292a29 a :TermTypes .
+
+
+:term_9c94d230-2f53-11ed-be7d-3f8589292a29 a :TermsAndConditions .
+
+:term_type_9c9dfd7e-2f53-11ed-be7d-3f8589292a29 a :TermTypes .
+
+
+:term_ae06c118-2f53-11ed-be7d-3f8589292a29 a :TermsAndConditions .
+
+:term_type_ae12c9d6-2f53-11ed-be7d-3f8589292a29 a :TermTypes .
+
+
+:term_d3ce13c4-2f53-11ed-be7d-3f8589292a29 a :TermsAndConditions .
+
+:c_d3d58b40-2f53-11ed-be7d-3f8589292a29 a prov:Agent .
+
+:term_type_d3e613ca-2f53-11ed-be7d-3f8589292a29 a :TermTypes .
+
+:contb2c_f6a0cd74-2f53-11ed-be7d-3f8589292a29 a fibo-fnd-agr-ctr:Contract .
+
+:contb2cb2b_f6a0cd74-2f53-11ed-be7d-3f8589292a29 a fibo-fnd-agr-ctr:Contract .
+
+:term_f6c929fe-2f53-11ed-be7d-3f8589292a29 a :TermsAndConditions .
+
+:c_f6d1c10e-2f53-11ed-be7d-3f8589292a29 a prov:Agent .
+
+:term_type_f6e448c4-2f53-11ed-be7d-3f8589292a29 a :TermTypes .
+
+:term_type_b00d9f78-56d0-11ed-8ce7-bb796b1450fe a :TermTypes .
+
+:term_type_ec0a2c94-56d0-11ed-8ce7-bb796b1450fe a :TermTypes .
+
+:term_type_0bc0702a-56d1-11ed-8ce7-bb796b1450fe a :TermTypes .
+
+:term_type_88d09018-56d1-11ed-8ce7-bb796b1450fe a :TermTypes .
+
+:term_type_b7c0258e-56d4-11ed-8ce7-bb796b1450fe a :TermTypes .
+
+:term_type_02627664-56d5-11ed-8ce7-bb796b1450fe a :TermTypes .
+
+:term_type_470a63c6-56d5-11ed-8ce7-bb796b1450fe a :TermTypes .
+
+:term_type_7456ed40-56d5-11ed-8ce7-bb796b1450fe a :TermTypes .
+
+:term_type_a6d76ed4-56d5-11ed-8ce7-bb796b1450fe a :TermTypes .
+
+:term_type_124266c4-56d6-11ed-8ce7-bb796b1450fe a :TermTypes .
+
+:term_type_4dcf012a-56d6-11ed-8ce7-bb796b1450fe a :TermTypes .
+
+:term_type_75cfc97a-56d6-11ed-8ce7-bb796b1450fe a :TermTypes .
+
+:term_type_a339c07a-56d9-11ed-bdc0-6dbbddf017b8 a :TermTypes .
+
+:term_type_d1e72e62-56d9-11ed-bdc0-6dbbddf017b8 a :TermTypes .
+
+:term_type_e40a93cc-56d9-11ed-bdc0-6dbbddf017b8 a :TermTypes .
+
+:term_type_0f46265a-56da-11ed-bdc0-6dbbddf017b8 a :TermTypes .
+
+:term_type_21b7ed32-56da-11ed-bdc0-6dbbddf017b8 a :TermTypes .
+
+:term_type_47086580-56da-11ed-bdc0-6dbbddf017b8 a :TermTypes .
+
+:term_type_6588ca4a-56da-11ed-bdc0-6dbbddf017b8 a :TermTypes .
+
+:term_type_7e8732a6-56db-11ed-bdc0-6dbbddf017b8 a :TermTypes .
+
+:term_type_8ae69a3c-56db-11ed-bdc0-6dbbddf017b8 a :TermTypes .
+
+:term_type_cea23dc6-56db-11ed-bdc0-6dbbddf017b8 a :TermTypes .
+
+:term_type_dacd971c-56db-11ed-bdc0-6dbbddf017b8 a :TermTypes .
+
+:term_type_0a8a60b6-56dc-11ed-bdc0-6dbbddf017b8 a :TermTypes .
+
+:term_type_0f75d8e4-56dc-11ed-bdc0-6dbbddf017b8 a :TermTypes .
+
+:term_type_1d8b0148-56dc-11ed-bdc0-6dbbddf017b8 a :TermTypes .
+
+:term_type_416e4ec6-56dc-11ed-bdc0-6dbbddf017b8 a :TermTypes .
+
+:term_type_5c2fb628-56dc-11ed-bdc0-6dbbddf017b8 a :TermTypes .
+
+:term_type_a994f1ee-56dc-11ed-bdc0-6dbbddf017b8 a :TermTypes .
+
+:contb2c_f6172eaa-a2e6-11ed-b1bc-0b613fb8badf a fibo-fnd-agr-ctr:Contract .
+
+:term_d520e94e-a303-11ed-b1bc-0b613fb8badf a :TermsAndConditions .
+
+:ob_28583404-a305-11ed-b1bc-0b613fb8badf a :Obligation .
+
+:ob_4a939d88-a305-11ed-b1bc-0b613fb8badf a :Obligation .
+
+rdfs:comment rdfs:domain rdfs:Resource .
+
+rdfs:label rdfs:domain rdfs:Resource .
+
+rdfs:isDefinedBy rdfs:domain rdfs:Resource;
+  rdfs:range rdfs:Resource .
+
+rdfs:seeAlso rdfs:domain rdfs:Resource;
+  rdfs:range rdfs:Resource .
+
+rdf:hasType rdfs:range prov:SoftwareAgent;
+  rdfs:label "has type"@en;
+  dct:description "Used to identify the type of an agent."@en .
+
+owl:bottomObjectProperty rdfs:range owl:Thing;
+  rdfs:comment "The object property that does not relate any two individuals.";
+  rdfs:label "bottom object property";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:sourceIndividual rdfs:range owl:Thing;
+  rdfs:comment "The property that determines the subject of a negative property assertion.";
+  rdfs:label "source individual";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:targetIndividual rdfs:range owl:Thing;
+  rdfs:comment "The property that determines the object of a negative object property assertion.";
+  rdfs:label "target individual";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:topObjectProperty rdfs:range owl:Thing;
+  rdfs:comment "The object property that relates every two individuals.";
+  rdfs:label "top object property";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+time:hasBeginning rdfs:range time:Instant;
+  rdfs:label "has beginning"@en;
+  dct:description "Beginning of a temporal entity."@en .
+
+time:hasEnd rdfs:range time:Instant;
+  rdfs:label "has end"@en;
+  dct:description "End of a temporal entity."@en .
+
+dcat:bbox rdfs:range LCC:GeographicRegion;
+  rdfs:label "bounding box"@en;
+  dct:description "The geographic bounding box of a resource." .
+
+dcat:distribution rdfs:range dcat:Distribution;
+  rdfs:label "distribution"@en;
+  dct:description "A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above)."@en .
+
+dcat:hadRole rdfs:range dcat:Role;
+  rdfs:label "had role"@en;
+  dct:description "The function of an entity or agent with respect to another entity or resource."@en .
+
+dpv:hasPersonalDataCategory rdfs:range dpv:PersonalDataCategory;
+  rdfs:label "has personal data category"@en;
+  dct:description "This property associates a personal data category with an instance of legal data handling or consent"@en .
+
+dpv:hasPurpose rdfs:range dpv:Purpose;
+  rdfs:label "has purpose"@en;
+  dct:description "This property associates a purpose with an instance of legal data handling or consent"@en .
+
+prov:actedOnBehalfOf rdfs:range prov:Agent;
+  rdfs:label "acted on behalf of"@en;
+  dct:description "An object property to express the accountability of an agent towards another agent. The subordinate agent acted on behalf of the responsible agent in an actual activity."@en .
+
+prov:wasInfluencedBy rdfs:range prov:Agent;
+  rdfs:comment "See https://www.w3.org/TR/prov-o/#wasInfluencedBy";
+  rdfs:label "was influenced by"@en;
+  dct:description "Influence is the capacity of an entity, activity, or agent to have an effect on the character, development, or behavior of another by means of usage, start, end, generation, invalidation, communication, derivation, attribution, association, or delegation."@en .
+
+prov:wasGeneratedBy rdfs:range dpv:Processing;
+  rdfs:label "was generated by"@en;
+  dct:description "Used to identify how a dataset was generated. Specifically, what data processing generated the dataset." .
+
+fibo-fnd-agr-ctr:hasContractualElement rdfs:range :TermsAndConditions;
+  rdfs:label "has contractual element"@en;
+  dct:description "Used to indicate something that is a component of an agreement/contract."@en .
+
+fibo-fnd-agr-ctr:hasEffectiveDate rdfs:range time:TemporalEntity;
+  rdfs:label "has effective date"@en;
+  dct:description "Used to indicate the date a contract, relationship, or policy comes into force."@en .
+
+gconsent:hasRole rdfs:range dcat:Role;
+  rdfs:label "has role"@en;
+  dct:description "Indicates the role played by specified Person or Organisation or Third Party in the specified Association."@en .
+
+gconsent:isStatusForConsent rdfs:range gconsent:Consent;
+  rdfs:label "is status for"@en;
+  dct:description "Links a status to the consent that uses it."@en .
+
+:ConsentID rdfs:range xsd:string;
+  rdfs:label "consent id"@en;
+  dct:description "Used to associate a consent with a consent ID."@en .
+
+:agentID rdfs:range xsd:string;
+  rdfs:label "agent id"@en;
+  dct:description "Used to associate an agent with an agent ID."@en .
+
+:companyID rdfs:range xsd:string;
+  rdfs:comment "Used to associate a company with an company ID."@en;
+  rdfs:label "comapny id"@en .
+
+:consentID rdfs:range xsd:string;
+  rdfs:label "consent id"@en;
+  dct:description "Used to associate a consent with a consent ID."@en .
+
+:contractID rdfs:range xsd:string;
+  rdfs:comment "Used to associate a contract to a contract ID."@en;
+  rdfs:label "contract id"@en .
+
+:contractorID rdfs:range xsd:string;
+  rdfs:label "contractor id"@en;
+  dct:description "Used to associate a contractor to a contractor ID."@en .
+
+:hasCompany rdfs:range xsd:string;
+  rdfs:label "has company"@en .
+
+:hasContractors rdfs:range xsd:string;
+  rdfs:label "has contractors"@en .
+
+:hasObligations rdfs:range xsd:string;
+  rdfs:label "has obligations"@en .
+
+:hasSignature rdfs:range xsd:string;
+  rdfs:comment "Used to store signature text or url for a contract."@en;
+  rdfs:label "has signature"@en .
+
+:hasSignatures rdfs:range xsd:string;
+  rdfs:comment "Used to contain a list of contractor signatures to a specific contract."@en;
+  rdfs:label "has signatures"@en .
+
+:hasTerms rdfs:range xsd:string;
+  rdfs:label "has terms"@en .
+
+:hasVATIN rdfs:range xsd:string;
+  rdfs:comment "Used to associate and contractor with an VATIN."@en;
+  rdfs:label "has VATIN"@en .
+
+:hash rdfs:range xsd:string;
+  rdfs:label "hash"@en;
+  dct:description "A hash function is any function that can be used to map data of arbitrary size to fixed-size values. smashHit uses hashes for traceability."@en .
+
+:licenseID rdfs:range xsd:string;
+  rdfs:label "license id"@en;
+  dct:description "Used to associate a license with a license ID."@en .
+
+:obligationID rdfs:range xsd:string;
+  rdfs:label "obligation id"@en;
+  dct:description "Used to associate a obligation to a term obligation ID."@en .
+
+:obligationStateID rdfs:range xsd:string;
+  rdfs:label "obligation state id"@en;
+  dct:description "Used to associate a obligation state to a obligation state ID."@en .
+
+:signatureID rdfs:range xsd:string;
+  rdfs:comment "Used to associate a contractor signature with an signature ID."@en;
+  rdfs:label "signature id"@en .
+
+:termID rdfs:range xsd:string;
+  rdfs:label "term id"@en;
+  dct:description "Used to associate a term to a contract term ID."@en .
+
+:termTypeID rdfs:range xsd:string;
+  rdfs:label "term type id"@en;
+  dct:description "Used to associate a term type to a contract term type ID."@en .
+
+dct:accessRights rdfs:range xsd:string;
+  rdfs:comment "A rights statement that concerns how the distribution is accessed."@en;
+  rdfs:label "access rights"@en .
+
+dct:format rdfs:range xsd:string;
+  rdfs:label "format"@en;
+  dct:description "The file format of the distribution."@en .
+
+dct:issued rdfs:range xsd:dateTime;
+  rdfs:label "issued"@en;
+  dct:description """Date of formal issuance (e.g., publication) of the distribution.
+"""@en .
+
+dct:language rdfs:range xsd:string;
+  rdfs:comment "A language of the item. This refers to the natural language used for textual metadata (i.e. titles, descriptions, etc) of a cataloged resource (i.e. dataset or service) or the textual values of a dataset distribution"@en;
+  rdfs:label "language"@en .
+
+dct:modified rdfs:range <https://www.w3.org/TR/xmlschema11-2/#dateTimeStamp>;
+  rdfs:comment "Most recent date on which the distribution was changed, updated or modified."@en;
+  rdfs:label "modified"@en .
+
+dct:rights rdfs:range xsd:string;
+  rdfs:comment "Information about rights held in and over the distribution."@en;
+  rdfs:label "rights"@en .
+
+dct:title rdfs:range xsd:string;
+  rdfs:comment "A name given to the distribution."@en;
+  rdfs:label "title"@en .
+
+owl:bottomDataProperty rdfs:range rdfs:Literal;
+  rdfs:comment "The data property that does not relate any individual to any data value.";
+  rdfs:label "bottom data property";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:cardinality rdfs:range xsd:nonNegativeInteger;
+  rdfs:comment "The property that determines the cardinality of an exact cardinality restriction.";
+  rdfs:label "cardinality";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:maxCardinality rdfs:range xsd:nonNegativeInteger;
+  rdfs:comment "The property that determines the cardinality of a maximum cardinality restriction.";
+  rdfs:label "max cardinality";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:maxQualifiedCardinality rdfs:range xsd:nonNegativeInteger;
+  rdfs:comment "The property that determines the cardinality of a maximum qualified cardinality restriction.";
+  rdfs:label "max qualified cardinality";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:minCardinality rdfs:range xsd:nonNegativeInteger;
+  rdfs:comment "The property that determines the cardinality of a minimum cardinality restriction.";
+  rdfs:label "min cardinality";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:minQualifiedCardinality rdfs:range xsd:nonNegativeInteger;
+  rdfs:comment "The property that determines the cardinality of a minimum qualified cardinality restriction.";
+  rdfs:label "min qualified cardinality";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:qualifiedCardinality rdfs:range xsd:nonNegativeInteger;
+  rdfs:comment "The property that determines the cardinality of an exact qualified cardinality restriction.";
+  rdfs:label "qualified cardinality";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+:fulfilmentDate rdfs:range time:TemporalEntity;
+  rdfs:comment "Relates obligations to their fulfilment dates."@en;
+  rdfs:label "fulfillment date"@en .
+
+:hasContractIdB2C rdfs:range xsd:string;
+  rdfs:comment "Used to associate contract id to b2c."@en;
+  rdfs:label "has contractid b2c"@en .
+
+
+
+:contb2b_e45dc546-2e9e-11ed-be7d-3f8589292a29 rdf:value 200;
+  :contractType :Written;
+  :forPurpose "Personal data sharing purposes";
+  dct:description "Personal data sharing purposes";
+  fibo-fnd-agr-ctr:hasExecutionDate "2023-04-20 10:38:07.617000+00:00"^^xsd:dateTime .
+
+
+
+
+
+:contb2c_b67ca822-2f52-11ed-be7d-3f8589292a29 rdf:value 200;
+  :contractType :written;
+  :forPurpose "data sharing between Amar Tauqeer and LexisNexis";
+  dct:description "data sharing between Amar Tauqeer and LexisNexis" .
+
+
+
+:contb2c_f6a0cd74-2f53-11ed-be7d-3f8589292a29 rdf:value 200;
+  :contractType :Written;
+  :forPurpose "Data sharing between Geni and SmashHit";
+  dct:description "Data sharing between Geni and SmashHit";
+  fibo-fnd-agr-ctr:hasExecutionDate "2023-04-20 17:14:32.687000+00:00"^^xsd:dateTime .
+
+:contb2cb2b_f6a0cd74-2f53-11ed-be7d-3f8589292a29 rdf:value 200;
+  :contractType :Written;
+  :forPurpose "Data sharing between X1 and X2";
+  dct:description "Data sharing between X1 and X2" .
+
+:contb2c_f6172eaa-a2e6-11ed-b1bc-0b613fb8badf rdf:value 300;
+  :contractType :Written;
+  :forPurpose "data sharing between processor and consumer";
+  dct:description "data sharing between processor and consumer" .
+
+rdf:type rdfs:comment "The subject is an instance of a class.";
+  rdfs:label "type";
+  rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+rdfs:subPropertyOf rdfs:comment "The subject is a subproperty of a property.";
+  rdfs:label "subPropertyOf";
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> .
+
+rdfs:subClassOf rdfs:comment "The subject is a subclass of a class.";
+  rdfs:label "subClassOf";
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> .
+
+rdfs:domain rdfs:comment "A domain of the subject property.";
+  rdfs:label "domain";
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> .
+
+rdfs:range rdfs:comment "A range of the subject property.";
+  rdfs:label "range";
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> .
+
+owl:sameAs rdfs:comment "The property that determines that two given individuals are equal.";
+  rdfs:label "same as";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:equivalentProperty rdfs:comment "The property that determines that two given properties are equivalent.";
+  rdfs:label "equivalentProperty";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:equivalentClass rdfs:comment "The property that determines that two given classes are equivalent, and that is used to specify datatype definitions.";
+  rdfs:label "equivalentClass";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:inverseOf rdfs:comment "The property that determines that two given properties are inverse.";
+  rdfs:label "inverseOf";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+rdf:subject rdfs:comment "The subject of the subject RDF statement.";
+  rdfs:label "subject";
+  rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+rdf:predicate rdfs:comment "The predicate of the subject RDF statement.";
+  rdfs:label "predicate";
+  rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+rdf:object rdfs:comment "The object of the subject RDF statement.";
+  rdfs:label "object";
+  rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+rdf:first rdfs:comment "The first item in the subject RDF list.";
+  rdfs:label "first";
+  rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+rdf:rest rdfs:comment "The rest of the subject RDF list after the first item.";
+  rdfs:label "rest";
+  rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+rdf:value rdfs:comment "Idiomatic property used for structured values.";
+  rdfs:label "value";
+  rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+rdf:nil rdfs:comment "The empty list, with no items in it. If the rest of a list is nil then the list has no more items in it.";
+  rdfs:label "nil";
+  rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+rdfs:comment rdfs:comment "A description of the subject resource.";
+  rdfs:label "comment";
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> .
+
+rdfs:label rdfs:comment "A human-readable name for the subject.";
+  rdfs:label "label";
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> .
+
+rdfs:isDefinedBy rdfs:comment "The defininition of the subject resource.";
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> .
+
+rdfs:seeAlso rdfs:comment "Further information about the subject resource.";
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> .
+
+owl:differentFrom rdfs:comment "The property that determines that two given individuals are different."@en;
+  rdfs:label "different from"@en;
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:Thing rdfs:comment "The class of OWL individuals.";
+  rdfs:label "Thing";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:versionIRI rdfs:comment "The property that identifies the version IRI of an ontology.";
+  rdfs:label "versionIRI";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:imports rdfs:comment "The property that is used for importing other ontologies into a given ontology.";
+  rdfs:label "imports";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:versionInfo rdfs:comment "The annotation property that provides version information for an ontology or another OWL construct.";
+  rdfs:label "versionInfo";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+dct:description rdfs:comment """
+Description may include but is not limited to an abstract, a table of contents, a graphical representation, or a free text account of the resource."""@en;
+  rdfs:label "description"@en .
+
+dct:hasVersion rdfs:comment """A related resource that is a version, edition, or adaptation of the described resource.
+Can be the version of consent and/or contract."""@en;
+  rdfs:label "hasVersion"@en .
+
+fibo-fnd-agr-ctr:Contract rdfs:comment "A contractual relationship is evidenced by (1) an offer, (2) acceptance of the offer, and a (3) valid (legal and valuable) consideration. A contract is a kind of agreement, and as such it embodies the assertion that it has been negotiated, such negotiation having included the presence of some offer and the acceptance of that offer on the part of either or both of the parties. Contracts are usually written but may be spoken or implied, and generally have to do with employment, sale or lease, or tenancy."@en;
+  rdfs:label "Contract"@en;
+  dct:description "Voluntary, deliberate agreement between competent parties to which the parties agree to be legally bound, and for which the parties provide valuable consideration."@en .
+
+gconsent:Consent rdfs:comment "Consent based on GDPR";
+  rdfs:label "Consent"@en;
+  dct:description """As per Article 4(11) of the GDPR, ‘consent’ of the data subject means any freely given, specific, informed and unambiguous indication of the data subject’s wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement to the processing of personal data relating to him or her;
+
+In the case of this ontology, 'Consent' is a concept as well as a tangible entity (something that has a provenance record). To separate this distinction with relation to the data subject, the Consent class represents the consent of the data subject in its entirely, including any history and annotations for it.
+"""@en .
+
+owl:backwardCompatibleWith rdfs:comment "The annotation property that indicates that a given ontology is backward compatible with another ontology.";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:deprecated rdfs:comment "The annotation property that indicates that a given entity has been deprecated.";
+  rdfs:label "deprecated";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:incompatibleWith rdfs:comment "The annotation property that indicates that a given ontology is incompatible with another ontology.";
+  rdfs:label "incompatibleWith";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:priorVersion rdfs:comment "The annotation property that indicates the predecessor ontology of a given ontology.";
+  rdfs:label "priorVersion";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+gconsent:ConsentStatusWithdrawn rdfs:comment "Also used when consent is revoked."@en;
+  rdfs:label "Withdrawn"@en;
+  dct:description "Indicates consent has been withdrawn."@en .
+
+fibo-fnd-plc-loc:Municipality rdfs:comment """The territory over which a municipality has jurisdiction may encompass:
+- only one populated place such as a city, town, or village
+- several of such places (e.g., early jurisdictions in the state of New Jersey (1798-1899) as townships governing several villages, Municipalities of Mexico)
+- only parts of such places, sometimes boroughs of a city such as the 34 municipalities of Santiago, Chile."""@en;
+  rdfs:label "Municipality"@en;
+  dct:description "Urban administrative division having corporate status and usually powers of self-government or jurisdiction"@en .
+
+dpv:Processing rdfs:comment """Processing is defined by the GDPR (Article 4-2) as \"any operation or set of operations which is performed on personal data or on sets of personal data, whether or not by automated means, such as collection, recording, organisation, structuring, storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or otherwise making available, alignment or combination, restriction, erasure or destruction;\".
+
+Processing can be considered as the action, within an activity for example, that uses data in a particular or specific way. Therefore, processing specifies what is happening to/with the data.""";
+  rdfs:label "Processing"@en;
+  dct:description "The processing performed on personal data"@en .
+
+:hasOrganization rdfs:comment "Relates a contractor to a specific organization."@en;
+  rdfs:label "has organization"@en .
+
+LCC:Territory rdfs:comment "Certain territories are included in the ISO 3166-2 code set without an alpha 2 or alpha 3 code.  In these cases, the numeric code for the subregion may have more than 3 characters in their corresponding numeric region codes."@en;
+  rdfs:label "Territory"@en;
+  dct:description "A geopolitical entity, typically considered an area of special geopolitical interest, related to a country or other geopolitical entity"@en .
+
+gconsent:Medium rdfs:comment "The class can also be used for contracts and licenses, which have the same types of mediums."@en;
+  rdfs:label "Medium "@en;
+  dct:description """Describes the medium through which consent was given/provided. Example: web form, recorded voice, signature on document.
+"""@en .
+
+:isProvidedBy rdfs:comment "Indicates the entity or activitiy that provided the consent."@en;
+  rdfs:label "is provided by"@en .
+
+:FulfilledState rdfs:comment "An obligation state is said to be fulfilled if the obligaion has been asigned and its action has been carried out during the time window [ts, te], where ts presents as a start time and te as end time."@en;
+  rdfs:label "Fulfilled"@en .
+
+:InvalidState rdfs:comment "An obligation state is said to be invalid if te (end time) is already passed when it is assigned."@en;
+  rdfs:label "Invalid"@en .
+
+:PendingState rdfs:comment "If an obligation is not invalid but has not yet become fulfilled or violated, then it is pending."@en;
+  rdfs:label "Pending"@en .
+
+:ViolatedState rdfs:comment "If the obligation has been assigned, has not been fulfilled, and is not invalid, but te has passed, then it is violated."@en;
+  rdfs:label "Violated"@en .
+
+:Pending rdfs:comment "The status is \"pending\", for example, when an entity has requested a contract to be terminated and the process has begun but is not completed yet."@en;
+  rdfs:label "Pending"@en;
+  dct:description "A contract has a status \"pending\" when some action related to its signing or termination is in progress."@en .
+
+:Updated rdfs:comment "A contract has been updated within the smashHit system."@en;
+  rdfs:label "Updated"@en .
+
+dct:type rdfs:comment "The nature or genre of the resource."@en;
+  rdfs:label "type" .
+
+owl:topDataProperty rdfs:comment "The data property that relates every individual to every data value.";
+  rdfs:label "top data property";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+:DataProtectionOfficer rdfs:comment "The Data Protection Officer (DPO) ensures, in an independent manner, that the European Commission correctly applies the law protecting individuals’ personal data. The DPO keeps a public register explaining all operations carried out by the Commission that involve processing personal data."@en;
+  rdfs:label "Data Protection Officer"@en .
+
+consent:AppBased rdfs:comment "It also identifies if the contract/license is taken in the form of mobile application."@en;
+  rdfs:label "App Based"@en;
+  dct:description "It identifies if the consent is taken in the form of mobile application."@en .
+
+consent:Audio rdfs:comment "It also identifies if the contract is made in the form of audio or verbal."@en;
+  rdfs:label "Audio"@en;
+  dct:description """It is used to identify if the consent is taken in the form of audio.
+"""@en .
+
+consent:OnlineForm rdfs:comment "It also identifies if the contract/license is made in the form of an online form."@en;
+  rdfs:label "Online Form"@en;
+  dct:description """It identifies if the consent is taken in the form of an online form.
+"""@en .
+
+consent:OnlineOptInOption rdfs:comment "It also identifies if the contract/license is made as an online opt-in option."@en;
+  rdfs:label "Opt-In Option"@en;
+  dct:description """It identifies if the consent is taken as an online opt-in option.
+"""@en .
+
+consent:Paper rdfs:comment "It also identifies if the contract/license is made on paper."@en;
+  rdfs:label "Paper"@en;
+  dct:description """It identifies if the consent is taken on paper.
+"""@en .
+
+consent:Video rdfs:comment "It also identifies if the contract/license is made in the form of video."@en;
+  rdfs:label "Video"@en;
+  dct:description """It identifies if the consent is taken in the form of video.
+"""@en .
+
+dcat:Catalog rdfs:comment "A Web-based data catalog is typically represented as a single instance of this class"@en;
+  rdfs:label "Catalog"@en;
+  dct:description """A curated collection of metadata about resources (e.g., datasets and data services in the context of a data catalog)
+"""@en .
+
+dpv:Risk rdfs:comment """This entity is a connection point to other ontologies identifying all possible Risks that can occur to the data of a data subject, as for instance the Risks defined in the DPV-GDPR vocabulary:
+https://w3c.github.io/dpv/dpv-gdpr/"""@en;
+  rdfs:label "Risk"@en;
+  dct:description "A risk or possibility or uncertainty of negative effects, impacts, or consequences."@en .
+
+fibo-fbc-fe-fse:InsuranceCompany rdfs:comment """In the US, insurance companies are subject to supervision by the insurance commissioner or a similar official or agency of a State; or any receiver or similar official or any liquidating agent for such a company, in his capacity as such. Common forms of insurance include life, property and casualty, and health insurance. In addition to insuring against hazards, many insurance companies also sell investments or investment-like products. The most prevalent investment products offered by insurers are annuities and life insurance policies that also feature investment elements.
+"""@en;
+  rdfs:label "Insurance Company"@en;
+  dct:description """A non-depository institution whose primary and predominant business activity is the writing of insurance or the reinsuring of risks underwritten by insurance companies, and that provides compensation based on the happening of at least one contingency
+"""@en .
+
+fibo-fnd-agr-ctr:MutualContractualAgreement rdfs:comment """Explanatory Note
+A mutual contractual agreement involves an exchange of a promises in which the promises made by each party represent considerations supporting the promises of the other party(ies)."""@en;
+  rdfs:label "Mutual Contractual Agreement"@en;
+  dct:description "contract between named parties whose individual rights and obligations are not transferable to another party without prior written permission."@en .
+
+:statusViolated rdfs:comment "Used to indicate the violation state of contract."@en;
+  rdfs:label "status violated"@en .
+
+:Violated rdfs:comment "A contract has been violated within the smashHit system."@en;
+  rdfs:label "Violated"@en .
+
+owl:disjointWith rdfs:comment "The property that determines that two given classes are disjoint.";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:onProperty rdfs:comment "The property that determines the property that a property restriction refers to.";
+  rdfs:label "onProperty";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:someValuesFrom rdfs:comment "The property that determines the class that an existential property restriction refers to.";
+  rdfs:label "someValuesFrom";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+<dct:Location> rdfs:comment "A spatial region or named place."@en .
+
+<dct:PeriodOfTime> rdfs:comment "An interval of time that is named or defined by its start and end dates."@en .
+
+<dct:accessRights> rdfs:comment "A rights statement that concerns how the distribution is accessed."@en .
+
+<dct:modified> rdfs:comment "Most recent date on which the distribution was changed, updated or modified."@en .
+
+<dct:rights> rdfs:comment "Information about rights held in and over the distribution."@en .
+
+rdfs:member rdfs:comment "A member of the subject resource.";
+  rdfs:label "member";
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> .
+
+owl:allValuesFrom rdfs:comment "The property that determines the class that a universal property restriction refers to.";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:annotatedProperty rdfs:comment "The property that determines the predicate of an annotated axiom or annotated annotation.";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:annotatedSource rdfs:comment "The property that determines the subject of an annotated axiom or annotated annotation.";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:annotatedTarget rdfs:comment "The property that determines the object of an annotated axiom or annotated annotation.";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:assertionProperty rdfs:comment "The property that determines the predicate of a negative property assertion.";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:complementOf rdfs:comment "The property that determines that a given class is the complement of another class.";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:datatypeComplementOf rdfs:comment "The property that determines that a given data range is the complement of another data range with respect to the data domain.";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:disjointUnionOf rdfs:comment "The property that determines that a given class is equivalent to the disjoint union of a collection of other classes.";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:distinctMembers rdfs:comment "The property that determines the collection of pairwise different individuals in a owl:AllDifferent axiom.";
+  rdfs:label "distinctMembers";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:hasKey rdfs:comment "The property that determines the collection of properties that jointly build a key.";
+  rdfs:label "hasKey";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:hasSelf rdfs:comment "The property that determines the property that a self restriction refers to.";
+  rdfs:label "hasSelf";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:hasValue rdfs:comment "The property that determines the individual that a has-value restriction refers to.";
+  rdfs:label "hasValue";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:intersectionOf rdfs:comment "The property that determines the collection of classes or data ranges that build an intersection.";
+  rdfs:label "intersectionOf";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:members rdfs:comment "The property that determines the collection of members in either a owl:AllDifferent, owl:AllDisjointClasses or owl:AllDisjointProperties axiom.";
+  rdfs:label "members";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:onClass rdfs:comment "The property that determines the class that a qualified object cardinality restriction refers to.";
+  rdfs:label "onClass";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:onDataRange rdfs:comment "The property that determines the data range that a qualified data cardinality restriction refers to.";
+  rdfs:label "onDataRange";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:onDatatype rdfs:comment "The property that determines the datatype that a datatype restriction refers to.";
+  rdfs:label "onDatatype";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:onProperties rdfs:comment "The property that determines the n-tuple of properties that a property restriction on an n-ary data range refers to.";
+  rdfs:label "onProperties";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:oneOf rdfs:comment "The property that determines the collection of individuals or data values that build an enumeration.";
+  rdfs:label "oneOf";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:propertyChainAxiom rdfs:comment "The property that determines the n-tuple of properties that build a sub property chain of a given property.";
+  rdfs:label "propertyChainAxiom";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:propertyDisjointWith rdfs:comment "The property that determines that two given properties are disjoint.";
+  rdfs:label "propertyDisjointWith";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:targetValue rdfs:comment "The property that determines the value of a negative data property assertion.";
+  rdfs:label "targetValue";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:unionOf rdfs:comment "The property that determines the collection of classes or data ranges that build a union.";
+  rdfs:label "unionOf";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+owl:withRestrictions rdfs:comment "The property that determines the collection of facet-value pairs that define a datatype restriction.";
+  rdfs:label "withRestrictions";
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+
+:License rdfs:label "License"@en;
+  dct:description "A set of requests/permissions to users of a Work, e.g. a copyright license, the public domain, information for distributors."@en .
+
+odrl:assignee rdfs:label "assignee"@en;
+  dct:description "Relates to agents who are the recipient of the rules."@en .
+
+odrl:Policy rdfs:label "Policy"@en;
+  dct:description "A non-empty group of Permissions and/or Prohibitions."@en .
+
+prov:Agent rdfs:label "Agent"@en;
+  dct:description "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. "@en .
+
+:InformationEntity rdfs:label "Information Entity"@en;
+  dct:description "Something that consists of knowledge about something, including that obtained from analysis, instruction, investigation, study, and other processes"@en .
+
+odrl:assigner rdfs:label "assigner"@en;
+  dct:description "Relates to agents to assign some rule to others."@en .
+
+<https://www.w3.org/TR/xmlschema11-2/#dateTimeStamp> rdfs:label "dateTimeStamp"@en .
+
+<fibo-der-drc-ma:hasBeneficiary> rdfs:label "has beneficiary"@en;
+  dct:description "Links a trust to a named beneficiary."@en .
+
+:GrantedAtTime rdfs:label "granted at time"@en;
+  dct:description "Links consent to the time it was granted."@en .
+
+:hasConsentStatus rdfs:label "has consent status"@en;
+  dct:description "Used to link consent to its status."@en .
+
+:Granted rdfs:label "Granted"@en;
+  dct:description "Specifies that the consent has been granted/given."@en .
+
+:ConsentStatus rdfs:label "Consent Status"@en;
+  dct:description "Specifies the status of consent."@en .
+
+gconsent:StatusValidForProcessing rdfs:label "Valid"@en;
+  dct:description "Specifies that the consent is valid."@en .
+
+:Status rdfs:label "Status"@en;
+  dct:description "Describes the status of both consent and contracts."@en .
+
+:WithdrawnAtTime rdfs:label "withdrawn at time"@en;
+  dct:description "Links consent to the time it was withdrawn."@en .
+
+gconsent:StatusInvalidForProcessing rdfs:label "Invalid"@en;
+  dct:description "Specified that the consent is invalid."@en .
+
+:atCity rdfs:label "at city"@en;
+  dct:description "Specifies that the location of an event is a municipality such as a city, town, village."@en .
+
+:atLocation rdfs:label "at location"@en;
+  dct:description "Relates consent, contract, license with a specific location, where a status change occurred."@en .
+
+LCC:Location rdfs:label "Location"@en;
+  dct:description "A place or position in time and/or space, including virtual place"@en .
+
+:hasContext rdfs:label "has context"@en;
+  dct:description "Relates the consent, contracts and licenses to their specific context."@en .
+
+LCC:GeopoliticalEntity rdfs:label "Geopolitical Entity"@en;
+  dct:description "Any country, federal province, city or other administrative unit that represents a geophysical location and has some political identity"@en .
+
+time:TemporalEntity rdfs:label "Temporal Entity"@en;
+  dct:description "A temporal interval or instant."@en .
+
+LCC:GeographicRegion rdfs:label "Geographic Region"@en;
+  dct:description "An area, especially part of a country or the world having definable characteristics but not always fixed boundaries"@en .
+
+:atCountry rdfs:label "at country"@en;
+  dct:description "Specifies that the location of an event is a country."@en .
+
+LCC:Country rdfs:label "Country"@en;
+  dct:description "a geopolitical entity representing a country or dependent territory"@en .
+
+:atDateTime rdfs:label "at date time"@en;
+  dct:description "Associates status with an instant of time when a change occurred."@en .
+
+:atRegion rdfs:label "at region"@en;
+  dct:description "Specifies that the location of an event is a region."@en .
+
+:atState rdfs:label "at state"@en;
+  dct:description "Specifies that the location of an event is a state."@en .
+
+LCC:CountrySubdivision rdfs:label "State"@en;
+  dct:description "A geopolitical entity, typically a division of a country, dependency, or other area of special geopolitical interest related to a country or other geopolitical entity"@en .
+
+:categoryBusinessToBusiness rdfs:label "category business to business"@en;
+  dct:description "Associates a business to business category to a contract."@en .
+
+:hasContractCategory rdfs:label "has contract category"@en;
+  dct:description "Used to relate a contract to a specific contract category (e.g., business to consumer)."@en .
+
+:ContractCategory rdfs:label "Contract Category"@en;
+  dct:description "Describes the contract category."@en .
+
+:BusinessToBusiness rdfs:label "Business To Business"@en;
+  dct:description "Describes a business to business contract."@en .
+
+:categoryBusinessToConsumer rdfs:label "category business to consumer"@en;
+  dct:description "Associates a business to consumer category to a contract."@en .
+
+:BusinessToConsumer rdfs:label "Business To Consumer"@en;
+  dct:description "Describes a business to consumer contract."@en .
+
+:forDataProcessing rdfs:label "for data processing"@en;
+  dct:description "Relates consent to specific data processing."@en .
+
+:hasContactPoint rdfs:label "has contact point"@en;
+  dct:description "Associated an agent with specific contact information"@en .
+
+dpv:Contact rdfs:label "Contact"@en;
+  dct:description "Information that can be used for contacting an individual e.g. email address or phone number"@en .
+
+dpv:Tracking rdfs:label "Tracking"@en;
+  dct:description "Personal data that can be used to track an individual or used as an identifier e.g. location or email"@en .
+
+dpv:PersonalDataCategory rdfs:label "Personal Data Category"@en;
+  rdfs:isDefinedBy "http://www.w3.org/ns/dpv#PersonalDataCategory"@en;
+  dct:description "A category of personal data (as defined by GDPR article 4.1) from the personal data categories taxonomy, i.e. for instance denoting the category of an object/field or data item that is used for processing"@en .
+
+:hasContractStatus rdfs:label "has contract status"@en;
+  dct:description "Links contract status to a contract"@en .
+
+:ContractStatus rdfs:label "Contract Status"@en;
+  dct:description "Describes the status of a contract."@en .
+
+:hasContractType rdfs:label "has contract type"@en;
+  dct:description " Used to related a contract to a specific contract type."@en .
+
+:hasCountry rdfs:label "has country"@en .
+
+:hasCreationDate rdfs:label "creation date"@en;
+  dct:description "Relates contracts and licenses to their creation date."@en .
+
+:hasDataController rdfs:label "has data controller"@en;
+  dct:description "Relates consent and contracts to a specific data controller."@en .
+
+:hasDataProcessor rdfs:label "has data processor"@en;
+  dct:description "Relates consent and contract to a specific data processor."@en .
+
+:hasDataProtectionOfficer rdfs:label "has data protection officer"@en;
+  dct:description "Relates consent and contract to a specific data protection officer."@en .
+
+:hasDataSubject rdfs:label "has data subject"@en;
+  dct:description "Relates consent and contract to a specific data subject."@en .
+
+:hasEmail rdfs:label "has email"@en;
+  dct:description "Associates an agent with an email address."@en .
+
+dpv:EmailAddress rdfs:label "Email Address"@en;
+  dct:description "Information about an individual's Email address."@en .
+
+:hasEndDate rdfs:label "has end date"@en;
+  dct:description "Relates contracts and licenses to their ending dates."@en .
+
+:hasExpirationDate rdfs:label "expiration date"@en;
+  dct:description "The expiration date of consent, contract or obligation. Format: xsd:dateTime"@en .
+
+:Obligation rdfs:label "Obligation"@en;
+  dct:description "Describes the contract obligations."@en .
+
+time:Instant rdfs:label "Instant"@en;
+  dct:description "A temporal entity with zero extent or duration"@en .
+
+:TermsAndConditions rdfs:label "Terms And Conditions"@en;
+  dct:description "Terms & Conditions means the Special Conditions of Contract and General Conditions of Contract herein mentioned and other stipulations incorporated in any part of Tender Document and /or Agreement."@en .
+
+:hasHash rdfs:label "has hash"@en;
+  dct:description "Used to associate a concept with its hash."@en .
+
+:SensorDataCategory rdfs:label "Sensor Data Category"@en .
+
+dcat:Resource rdfs:label "Resource"@en;
+  dct:description "Resource published or curated by a single agent."@en .
+
+dpv:DataSource rdfs:label "Data Source"@en;
+  dct:description "Source of data"@en .
+
+:hasID rdfs:label "has id"@en;
+  dct:description "Used to associate and agent with an id."@en .
+
+:hasMetadata rdfs:label "has metadata"@en;
+  dct:description "Links a resource to some metadata from the class InformationEntity."@en .
+
+:hasMinimumDuration rdfs:label "has minimum duration"@en;
+  dct:description "Specifies the minimum duration of a contract or license."@en .
+
+time:Interval rdfs:label "Interval"@en;
+  dct:description "A temporal entity with an extent or duration"@en .
+
+:hasName rdfs:label "has name"@en;
+  dct:description "Used to associate and agent, for example, a person with a name."@en .
+
+prov:Organization rdfs:label "Organisation"@en;
+  dct:description "An organization is a social or legal institution such as a company, society, etc."@en .
+
+:hasPassword rdfs:label "has password"@en;
+  dct:description "Associates an agent with his/her password."@en .
+
+:hasPersonalData rdfs:label "has personal data"@en;
+  dct:description "Associates agents with their personal data."@en .
+
+dpv:Password rdfs:label "Password"@en;
+  dct:description "An individual's password used in the process of authenticating the individual as a user accessing a system."@en .
+
+dpv:Authenticating rdfs:label "Authenticating"@en;
+  dct:description "Information used to authenticate an individual with something they know"@en .
+
+dpv:Internal rdfs:label "Internal"@en;
+  dct:description "Personal data about characteristics of an individual that are internal i.e. cannot be seen or observed"@en .
+
+:hasPostalAddress rdfs:label "has postal address"@en;
+  dct:description "Used to specify the physical address of a location."@en .
+
+dcat:Role rdfs:label "Role"@en;
+  dct:description "A role is the function of a resource or agent with respect to another resource, in the context of resource attribution or resource relationships."@en .
+
+:PostalAddress rdfs:label "Postal Address"@en;
+  dct:description "A textual entity that is used as directive to deliver something to a person, or organization"@en .
+
+:hasPostalCode rdfs:label "has postal code"@en;
+  dct:description "Used to specify the postal code related to a postal address."@en .
+
+:PostalCode rdfs:label "Postal Code"@en;
+  dct:description "A short series of letters and/or numbers that is part of an address, and shows exactly where a place is."@en .
+
+:hasPurposePreference rdfs:label "has purpose preference"@en;
+  dct:description "Associates an agent to his/her purpose preference."@en .
+
+dpv:Purpose rdfs:label "Purpose"@en;
+  dct:description "The purpose of Data Handling, from the purposes Taxonomy"@en .
+
+:hasRetentionDate rdfs:label "has retention date"@en;
+  dct:description "Associates a personal data category to its retention date."@en .
+
+:hasSensorDataCategory rdfs:label "has sensor data category"@en;
+  dct:description "Associates the sensor data to a specific sensor data category."@en .
+
+OntoSensor:Sensor rdfs:label "Sensor"@en .
+
+:Device rdfs:label "Device"@en;
+  dct:description "A thing made or adapted for a particular purpose, especially a piece of mechanical or electronic equipment."@en .
+
+:hasStates rdfs:label "has obligation states"@en;
+  dct:description "Links obligation states to a contract"@en .
+
+:ObligationStates rdfs:label "Obligation States"@en;
+  dct:description "Describes the states of obligation."@en .
+
+:hasTelephone rdfs:label "has telephone"@en;
+  dct:description "Used to associate and agent, for example, a person with an email."@en .
+
+dpv:TelephoneNumber rdfs:label "Telephone Number"@en;
+  dct:description "Information about telephone number"@en .
+
+:hasTermTypes rdfs:label "has term types"@en;
+  dct:description "Used to specify the basic term types related with a contract."@en .
+
+:hasTermsAndConditions rdfs:label "has terms and conditions"@en;
+  dct:description "Used to specify the obligations to a contract"@en .
+
+:TermTypes rdfs:label "Term Types"@en;
+  dct:description "Describes the types of terms and coditions."@en .
+
+:hasTerritory rdfs:label "has territory"@en .
+
+:hasUsername rdfs:label "has username"@en;
+  dct:description "Associates an agent with his/her username."@en .
+
+dpv:Username rdfs:label "Username"@en;
+  dct:description "A username used to identify an individual."@en .
+
+dpv:Identifying rdfs:label "Identifying"@en;
+  dct:description "Information that uniquely or semi-uniquely identifies a specific individual"@en .
+
+dpv:External rdfs:label "External"@en;
+  rdfs:isDefinedBy "http://www.w3.org/ns/dpv#External"@en;
+  dct:description "Personal Data that can be observed by another person i.e. has external characteristics that make it visible"@en .
+
+:inMedium rdfs:label "in medium"@en;
+  dct:description "Used to associate consent and contract with the medium through which they were created."@en .
+
+:isAboutData rdfs:label "is about data"@en;
+  dct:description "Used to specify the resource and/or data source which this consent is about."@en .
+
+:requestedBy rdfs:label "requested by"@en;
+  dct:description "Used to specify the agent by whom this consent was requested by."@en .
+
+:stateFulfilled rdfs:label "state fulfilled"@en;
+  dct:description "Used to indicate the fulfilled state of obligation."@en .
+
+:stateInvalid rdfs:label "state invalid"@en;
+  dct:description "Used to indicate the invalid state of obligation."@en .
+
+:statePending rdfs:label "state pending"@en;
+  dct:description "Used to indicate the pending state of obligation."@en .
+
+:stateViolated rdfs:label "state violated"@en;
+  dct:description "Used to indicate the vilolated state of obligation."@en .
+
+:statusCreated rdfs:label "status created"@en;
+  dct:description "Used to indicate the create state of contract."@en .
+
+:Created rdfs:label "Created"@en;
+  dct:description "A contract has been created within the smashHit system."@en .
+
+:statusExpired rdfs:label "status expired"@en;
+  dct:description "Used to indicate the expired state of contract."@en .
+
+:Expire rdfs:label "Expired"@en;
+  dct:description "A contract has been expired within the smashHit system."@en .
+
+:statusPending rdfs:label "status pending"@en;
+  dct:description "Used to indicate the pending state of contract."@en .
+
+:statusSigned rdfs:label "status signed"@en;
+  dct:description "Used to indicate the signed state of contract."@en .
+
+:Signed rdfs:label "Signed"@en;
+  dct:description "A contract has been signed by all entities involved in it."@en .
+
+:statusTerminated rdfs:label "status terminated"@en;
+  dct:description "Used to indicate the terminated state of contract."@en .
+
+:Terminated rdfs:label "Terminated"@en;
+  dct:description "A contract has been terminated."@en .
+
+:statusUpdated rdfs:label "status updated"@en;
+  dct:description "Used to indicate the update state of contract."@en .
+
+dct:creator rdfs:label "creator"@en;
+  dct:description "An entity responsible for making the resource."@en .
+
+rdf:hasInputData rdfs:label "has input data"@en;
+  dct:description "Associates input data from a resource with specific processing."@en .
+
+rdf:hasOutputData rdfs:label "has output data"@en;
+  dct:description "Associates output data with a type of processing."@en .
+
+prov:Person rdfs:label "Person"@en;
+  dct:description "Person agents are people."@en .
+
+prov:SoftwareAgent rdfs:label "Software Agent"@en;
+  dct:description "A software agent is running software."@en .
+
+dcat:Dataset rdfs:label "Dataset"@en;
+  dct:description "A collection of data, published or curated by a single agent, and available for access or download in one or more representations."@en .
+
+dcat:Distribution rdfs:label "Distribution"@en;
+  dct:description "A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above)."@en .
+
+:PersonalData rdfs:label "Personal Data"@en;
+  dct:description "Personal data are any information which are related to an identified or identifiable natural person (GDPR Art.4 (1))."@en .
+
+:identifier rdfs:label "identifier"@en;
+  rdfs:isDefinedBy "https://schema.org/identifier"@en;
+  dct:description "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links."@en .
+
+LCC:hasLatitude rdfs:label "has latitude"@en;
+  dct:description "the angle formed by the intersection of a line perpendicular to the Earth's surface at a point and the plane of the Equator"@en .
+
+LCC:hasLongitude rdfs:label "has longitude"@en;
+  dct:description "the angle between a plane that passes through the point and the North and South poles, and a reference plane"@en .
+
+LCC:hasMaximumLatitude rdfs:label "has maximum latitude"@en;
+  dct:description "The maximum latitude value that was recorded." .
+
+LCC:hasMaximumLongitude rdfs:label "has maximum longitude"@en;
+  dct:description "The maximum longitude value that was recorded." .
+
+LCC:hasMinimumLatitude rdfs:label "has minimum latitude"@en;
+  dct:description "The minimum latitude value that was recorded." .
+
+LCC:hasMinimumLongitude rdfs:label "has minimum longitude"@en;
+  dct:description "The minimum longitude value that was recorded." .
+
+OntoSensor:GPS rdfs:label "GPS"@en;
+  dct:description "A GPS Sensor"@en .
+
+OntoSensor:Humidity rdfs:label "Humidity"@en;
+  dct:description "A humidity sensor."@en .
+
+OntoSensor:Motion rdfs:label "Motion"@en;
+  dct:description "A Motion Sensor"@en .
+
+OntoSensor:Orientation rdfs:label "Orientation"@en;
+  dct:description "An orientation sensor."@en .
+
+:AcousticDetector rdfs:label "Acoustic "@en;
+  dct:description "Acoustic sensors can be used to measure speed, volume, carriageway occupancy and presence. The advantage of acoustic sensors is that they can function under all lighting conditions and during adverse weather."@en .
+
+:AirData rdfs:label "Air Data"@en;
+  dct:description "Sensor data from an air sensor." .
+
+:AirPollutionData rdfs:label "Air Pollution Data"@en;
+  dct:description "Sensor data from an air pollution sensor."@en .
+
+:AirPollutionSensor rdfs:label "Air Pollution Sensor"@en;
+  dct:description "Air pollution sensors detect gases like carbon monoxide and carbon dioxide by measuring the absorption of infrared light."@en .
+
+:BuildingData rdfs:label "Building Data"@en;
+  dct:description "Sensor data from a building."@en .
+
+:CarData rdfs:label "Car Data"@en;
+  dct:description "Sensor data from a car."@en .
+
+:CharityOrganisation rdfs:label "Charity Organisation"@en .
+
+campaneo:NonProfitOrganisation rdfs:label "Non Profit Organisation"@en;
+  dct:description "A nonprofit organization is a business that has been granted tax-exempt status by the Internal Revenue Service (IRS) because it furthers a social cause and provides a public benefit"@en .
+
+:DataController rdfs:label "Data Controller"@en;
+  dct:description "As per Article 4(7) of the GDPR, ‘controller’ means the natural or legal person, public authority, agency or other body which, alone or jointly with others, determines the purposes and means of the processing of personal data; where the purposes and means of such processing are determined by Union or Member State law, the controller or the specific criteria for its nomination may be provided for by Union or Member State law;"@en .
+
+:DataProcessor rdfs:label "Data Processor"@en;
+  dct:description "As per Article 4(8) of the GDPR,‘processor’ means a natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller;"@en .
+
+:DataSubject rdfs:label "Data Subject"@en;
+  dct:description "As per GDPR article 4 (1) a Data Subject is identified or identifiable natural person to which an information relates."@en .
+
+:InductiveLoopDetector rdfs:label "Inductive Loop Detector"@en;
+  dct:description "Inductive loop detectors are mainly used at intersections in conjunction with advanced signal traffic control systems, and on freeways for traffic monitoring and incident detection purposes."@en .
+
+:Magnetometer rdfs:label "Magnetometer"@en;
+  dct:description "Magnetometers can provide information on traffic volume, lane occupancy, speed as well as vehicle length. Further, magnetometers provide for point detection."@en .
+
+:MicroLoop rdfs:label "Micro Loop"@en;
+  dct:description "A type of magnetometer that is installed in pavements."@en .
+
+:MicrowaveRadarDetector rdfs:label "Microwave Radar Detector"@en;
+  dct:description "Microwave radar detectors are examples of non-intrusive detection devices whose installation and maintenance does NOT require lane closure and pavement modifications. Unlike inductive loops, non-intrusive detection devices are not embedded in the pavement. "@en .
+
+:PhotoelectricSensor rdfs:label "Photoelectric Sensor"@en;
+  dct:description "A photoelectric sensor uses a light beam to detect smoke."@en .
+
+:ProfitPrganisation rdfs:label "Profit Organisation"@en;
+  dct:description "A profit organisation exists primarily to generate a profit, that is, to take in more money than it spends."@en .
+
+:Renewed rdfs:label "Renewed"@en;
+  dct:description "A contract has been renewed."@en .
+
+:RoadData rdfs:label "Road Data"@en;
+  dct:description "Sensor data from a road sensor."@en .
+
+:SensorData rdfs:label "Sensor Data"@en;
+  dct:description "Data from a sensor."@en .
+
+:Signature rdfs:label "Signature"@en;
+  dct:description "Describes the signature associated with contractual parties."@en .
+
+:Source rdfs:label "Source"@en;
+  dct:description "Information about a place, person, or thing from which something originates or can be obtained."@en .
+
+:StorageLocation rdfs:label "Storage Location"@en;
+  dct:description "Technical storage location defined e.g. by a URL"@en .
+
+:WirelessMagnetometers rdfs:label "Wireless Magentometers"@en;
+  dct:description "A type of magnetometers that do not require extensive work under concrete."@en .
+
+campaneo:AutomobileOrganisation rdfs:label "Automobile Organisation"@en .
+
+campaneo:ConstructionOrganisation rdfs:label "Construction Organisation"@en .
+
+campaneo:EducationalOgranisation rdfs:label "Educational Organisation"@en .
+
+campaneo:GovernmentOrganisation rdfs:label "Government Organisation"@en .
+
+campaneo:University rdfs:label "University"@en .
+
+dpv:AcademicResearch rdfs:label "Academic Research"@en;
+  dct:description "Research conducted in an academic context e.g. within universities"@en .
+
+dpv:ResearchAndDevelopment rdfs:label "Research And Development"@en;
+  dct:description "Performing research and developing new methods,products, or services"@en .
+
+dpv:AccessControl rdfs:label "Access Control"@en;
+  dct:description "To conduct or enforce access control"@en .
+
+dpv:Security rdfs:label "Security"@en;
+  dct:description "Security of data"@en .
+
+dpv:Adapt rdfs:label "Adapt"@en;
+  dct:description "To modify the data, often rewritten into a new form for a new use"@en .
+
+dpv:Align rdfs:label "Align"@en;
+  dct:description "To adjust the data to be in relation to another data"@en .
+
+dpv:Alter rdfs:label "Alter"@en;
+  dct:description "To change the data withouth changing it into something else"@en .
+
+dpv:Collect rdfs:label "Collect"@en;
+  dct:description "To gather data from someone"@en .
+
+dpv:Combine rdfs:label "Combine"@en;
+  dct:description "To join or merge data"@en .
+
+dpv:CommercialInterest rdfs:label "Commercial Interest"@en;
+  dct:description "For purposes of commercial activities i.e. of profit or benefit to the Controller"@en .
+
+dpv:CommercialResearch rdfs:label "Commercial Research"@en;
+  dct:description "Research conducted in a commercial setting e.g. in a company"@en .
+
+dpv:Consult rdfs:label "Consult"@en;
+  dct:description "To consult or query data"@en .
+
+dpv:CreateEventRecommendations rdfs:label "Create Event Recommendations"@en;
+  dct:description "Create and provide personalised recommendations for events to the individual"@en .
+
+dpv:CreatePersonalizedRecommendations rdfs:label "Create Personalized Recommendations"@en;
+  dct:description "Create and provide personalised recommendations to the individual"@en .
+
+dpv:ServicePersonalization rdfs:label "Service Personalization"@en;
+  dct:description "Personalization of service or activity for the user"@en .
+
+dpv:CreateProductRecommendations rdfs:label "Create Product Recommendations"@en;
+  dct:description "To create product recommendations e.g. suggest similar products"@en .
+
+dpv:CustomerCare rdfs:label "Customer Care"@en;
+  dct:description "Processes related to providing assistance for customer satisfaction"@en .
+
+dpv:ServiceProvision rdfs:label "Service Provision"@en;
+  dct:description "Provision of service or activity"@en .
+
+dpv:DeliveryOfGoods rdfs:label "Delivery of Goods"@en;
+  dct:description "To deliver goods and services"@en .
+
+dpv:Destruct rdfs:label "Destruct"@en;
+  dct:description "To process data in a way it no longer exists or cannot be repaired"@en .
+
+dpv:DiscloseByTransmission rdfs:label "Disclose by Transmission"@en;
+  dct:description "To disclose data by means of transmission"@en .
+
+dpv:Disseminate rdfs:label "Disseminate"@en;
+  dct:description "To spread data throughout"@en .
+
+dpv:Erase rdfs:label "Erase"@en;
+  dct:description "To delete data"@en .
+
+dpv:Financial rdfs:label "Financial"@en;
+  dct:description "Personal data regarding finance or monetary information"@en .
+
+dpv:FraudPreventionAndDetection rdfs:label "Fraud Prevention And Detection"@en;
+  dct:description "To detect and prevent fraud"@en .
+
+dpv:IdentityVerification rdfs:label "Identity Verification"@en;
+  dct:description "To verify and authorise identity"@en .
+
+dpv:ImproveExistingProductsAndServices rdfs:label "Improve Existing Products and Services"@en;
+  dct:description "To improve existing products and services"@en .
+
+dpv:OptimisationForController rdfs:label "Optimisation For Controller"@en;
+  dct:description "Optimisation of activities and services for the Controller"@en .
+
+dpv:ServiceOptimization rdfs:label "Service Optimization"@en;
+  dct:description "Optimization of service or activity"@en .
+
+dpv:ImproveInternalCRMProcesses rdfs:label "Improve Internal CRM Processes"@en;
+  dct:description "To improve customer-relationship management (CRM) processes"@en .
+
+dpv:IncreaseServiceRobustness rdfs:label "Increase Service Robustness"@en;
+  dct:description "To improve the robustness and resilience of services"@en .
+
+dpv:InternalResourceOptimisation rdfs:label "Internal Resource Optimisation"@en;
+  dct:description "Optimisation of internal resources used by the organisation e.g. resource usage"@en .
+
+dpv:NonCommercialResearch rdfs:label "Non-Commercial Research"@en;
+  dct:description "Research conducted in a non-commercial setting e.g. for a non-profit-organisation (NGO)"@en .
+
+dpv:OfficialID rdfs:label "Official ID"@en;
+  dct:description "Information on an official identification document used by an individual."@en .
+
+dpv:OptimisationForConsumer rdfs:label "Optimisation For Consumer"@en;
+  dct:description "Optimisation of activities and services for the consumer or user"@en .
+
+dpv:OptimiseUserInterface rdfs:label "Optimise User Interface"@en;
+  dct:description "Optimisation of interfaces presented to the user"@en .
+
+dpv:Organise rdfs:label "Organise"@en;
+  dct:description "To organise data for arranging or classifying"@en .
+
+dpv:Ownership rdfs:label "Ownership"@en;
+  dct:description "Information about things an individual has owned, rented, borrowed, possessed"@en .
+
+dpv:PersonalisedBenefits rdfs:label "Personalised Benefits"@en;
+  dct:description "Personalisation of benefits received by the user"@en .
+
+dpv:Preference rdfs:label "Preference"@en;
+  dct:description "Information about an individual’s preferences or interests"@en .
+
+dpv:PrivacyPreference rdfs:label "Privacy Preference"@en;
+  dct:description "Information about an individual's privacy preferences"@en .
+
+dpv:Record rdfs:label "Record"@en;
+  dct:description "To make a record (especially media)"@en .
+
+dpv:Restrict rdfs:label "Restrict"@en;
+  dct:description "To apply a restriction on the processsing of specific records"@en .
+
+dpv:Retrieve rdfs:label "Retrieve"@en;
+  dct:description "To retrieve data, often in an automated manner"@en .
+
+dpv:SellDataToThirdParties rdfs:label "Sell Data To Third Parties"@en;
+  dct:description "To sell data or information to third parties"@en .
+
+dpv:SellInsightsFromData rdfs:label "Sell Insights From Data"@en;
+  dct:description "To sell or commercially provide insights obtained from analysis of data"@en .
+
+dpv:SellProductsToDataSubject rdfs:label "Sell Products To DataSubject"@en;
+  dct:description "To sell products or services to the data subject or user"@en .
+
+dpv:SellTargettedAdvertisements rdfs:label "Sell Targeted Advertisements"@en;
+  dct:description "To sell or provide targetted advertisements about the user to Third Parties"@en .
+
+dpv:Share rdfs:label "Share"@en;
+  dct:description "To retrieve data, often in an automated manner"@en .
+
+dpv:Store rdfs:label "Store"@en;
+  dct:description "To keep data for future use"@en .
+
+dpv:Structure rdfs:label "Structure"@en;
+  dct:description "To arrange data according to a structure"@en .
+
+dpv:UID rdfs:label "UID"@en;
+  dct:description "An unique identifier used to identify an individual."@en .
+
+dpv:Use rdfs:label "Use"@en;
+  dct:description "To use data"@en .
+
+dpv:UserInterfacePersonalisation rdfs:label "User Interface Personalisation"@en;
+  dct:description "Personalisation of interfaces presented to the user"@en .
+
+odrl:Duty rdfs:label "Duty"@en;
+  dct:description "The obligation to perform an Action."@en .
+
+odrl:Rule rdfs:label "Rule"@en;
+  dct:description "An abstract concept that represents the common characteristics of Permissions, Prohibitions, and Duties."@en .
+
+odrl:Permission rdfs:label "Permission"@en;
+  dct:description "The ability to perform an Action over an Asset."@en .
+
+<https://schema.org/birthDate> rdfs:label "Birth Date"@en;
+  dct:description "Date of birth"@en .
+
+:DataOwner rdfs:label "Data Subject"@en .
+
+:PostCode rdfs:label "Post Code"@en;
+  dct:description "A short series of letters and/or numbers that is part of an address, and shows exactly where a place is"@en .
+
+:given rdfs:label "Given"@en .
+
+:not_given rdfs:label "NotGiven"@en .
+
+dpv-gdpr:A7-3 rdfs:label "A7-3 Right to Withdraw Consent"@en .
+
+<http://ontologies.atb-bremen.de/smashHitCore> rdfs:isDefinedBy <http://www.w3.org/TR/owl2-mapping-to-rdf/>,
+    <http://www.w3.org/TR/owl2-rdf-based-semantics/>, <http://www.w3.org/TR/owl2-syntax/>;
+  rdfs:seeAlso <http://www.w3.org/2000/01/rdf-schema-more>, <http://www.w3.org/TR/owl2-rdf-based-semantics/#table-axiomatic-classes>,
+    <http://www.w3.org/TR/owl2-rdf-based-semantics/#table-axiomatic-properties>;
+  owl:versionIRI <http://ontologies.atb-bremen.de/smashHitCore>;
+  owl:imports <http://www.w3.org/2000/01/rdf-schema>;
+  dc:title "The OWL 2 Schema vocabulary (OWL 2)", "The RDF Concepts Vocabulary (RDF)",
+    "The RDF Schema vocabulary (RDFS)";
+  owl:versionInfo "$Date: 2022/04/15 10:54:12 $", "0.06"@en;
+  grddl:namespaceTransformation <http://dev.w3.org/cvsweb/2009/owl-grddl/owx2rdf.xsl> .
+
+:c_096dc6f4-2e97-11ed-be7d-3f8589292a29 :hasRole :DataProcessor .
+
+:c_356d371c-2e97-11ed-be7d-3f8589292a29 :hasRole :DataController .
+
+:c_6a094420-2e97-11ed-be7d-3f8589292a29 :hasRole :DataSubject .
+
+:c_32c4336e-2ed1-11ed-be7d-3f8589292a29 :hasRole :DataSubject .
+
+:c_534882e8-2ed1-11ed-be7d-3f8589292a29 :hasRole :DataController .
+
+:c_729c70aa-2ed1-11ed-be7d-3f8589292a29 :hasRole :DataProcessor .
+
+:c_43eecc50-2f51-11ed-be7d-3f8589292a29 :hasRole :DataSubject .
+
+:c_d3d58b40-2f53-11ed-be7d-3f8589292a29 :hasRole :DataSubject .
+
+:c_f6d1c10e-2f53-11ed-be7d-3f8589292a29 :hasRole :DataSubject .
+
+:term_type_8cdb028c-2e96-11ed-be7d-3f8589292a29 dct:description "Fo4xq/rloNErv+Wy57VTca9wJJB6fUUqZUcrmPWiWCfjEPrXGFQ10uvI9w8a62D6FSUTpi1RbWnDEJCNsv+eKg==" .
+
+:ob_c115e70a-2e97-11ed-be7d-3f8589292a29 dct:description "TEGQVOnkyOPSBoOlOO2uaZGx23nTfCUb4Jq6hHd4Ka7Ujd7SRlIdc1sWTKXr+6udaN7kA5aD906YJhghAwDH2m8psOk+MwZ5vMVgg6fBeZ7FO7xwLhxpHeTzwMNp3u1AK+vVV5wnmI2z6M27jps62FrQoO/qiKuCpc9YhrVS8pgpCzYvchmfo8DxJ7fKu+0LDGWEi+UlNSVJZ77FC9dzU+gd2u36UuXqR2tJGI8/LEI2FLifAzZkqESMa3yfIV6q1ycDP1dXC5SJxJlVFa3Q4NcchJ3vFfmzGAmUOFQMVqaWRYrZVionbwpbWxaTDfd7IDadPv8Iy+IE0dK6N4eBQeXNeWI/7O3lIZP/5rmieDeXsBJKKzGl23FBFbkmj/UvQ5fNO0e6vR6phymqZmEH9rY2+IyoTLH+e3jxOAiHI2UfHYehd7basmk5APyeOMZQaLJdlQMGchgj3AGQu9VmZmVBzzx5+WIRfSkWeM/HRqzqDetleThUP/QSCpQ5plAruFozECJRf5Mv4eM53bA5KdVRZ+ZRZjXfEr8L3OjUoHctcrvSfwmH8JdiYm1/sJo922ryp4pKLMTrZRD7C6MPdOeZEWqaOAmjwOiYuegmeVN8DzhTLtbq2HjuT3NIsoG/s5rHtsE/+71kwnhhm2x3UJT9IG5VdSUSM4vC5sRdG9IP9hRlo0s6Niv+8NHnxZkcWZt/aH9A/Vt1jPtut1I3KnKOHQIyfsDiGEHVh+FTYx9HbNX4KoJDBV/7J/tJa9pQ6U4pK5Vfif5ryNTm6K44xQZe6P9hDha2MC3d6tcCtUCLcU4Xz1MkvrXnJHdGme9TcU3Pr/5Oq0N5f7NCQHY0fUc1YDqvVm+Z0Z1SPDnJ1WJKw0UmXlRhnKyugQlfpW/O7IskLtpkYH5mvjDrxSyxJqFv+AyCauPaI9NnkAdfNqGRfbeN1aNOKfq9X9RhDNevBr6X7vF+bI0utaP2IfH9Cx95Hjo8d7WdygCoizyhIHtDUAvw+j+gYJsEUOtiracHfBYO97FJW7kM4biR7v+6ZjKrCDT4SUd6FGPZ9QXPglb2fLg6w1BjSFsDZDqGQcZ8gnjmSiN2Hs6LbCPqwdEdmm2RaZn+UIwhnpqo0jmfKkXm3iiys7CpUjYkrpiH7kbha19Q9WolDysjJbUhP5HCVuSkw7Qh6JipfiqQ6GpAgls=";
+  fibo-fnd-agr-ctr:hasExecutionDate "2022-09-07 10:25:52.749000+00:00"^^xsd:dateTime .
+
+:ob_d1cf3f7e-2e97-11ed-be7d-3f8589292a29 dct:description "BHOO1ud/pGF/YT5VWJg7UMy9cmsW84846ljLcXn+WCvrRWnuW2Ii5/XuqJqY8LgjVbcOxwUTujaWGSRv/OA4YYbhkXc05PMxaq00HcfFmz0imrXlloVj6MrS1r4zi5ikZEmvJCg+blyi6QOs6SDx+Vm7ORlCzm+w65Sjwcq/NzfnjCO+dQLvIHcXOB1QEa59Y/w12voLuBPUVW5oBjFrjvUHCGFw0VJzf8VdMItOHlBbp/9G0naTRUgB/CcF9HjaQW0p1SqJBapIN6ZJpYpTWyh6LkUrzPrSiMRe96siqrIvE6QyJgFdEXK8AprGP99WF4UDyZvcLpOADG8yA8l5d3mex1kEYWbwQr1Bt1XJIOsgY8xHWY17/VmWLCFq/1epez6tgjr0iBEjG/yPHW9+CiC1Ak78t9jVUPEjL+CkGTHSavtwa2GpezkKp1zfOr5hoMTbJLQcCqozopQByNyZOn3xqVfwfvnsBFAAgPALSKq/dQpCec6KNG0cCbQDqY7K2nF/0LrFI9uxNdSNTnVaBN/obb+4S1llmBRBTCt7I/QvNmm1IZY27RRAm+tT9+CIoBhwIQkk8NFD30dkMD6EvapWGy8eb5QWg5DGnGq71Jj2IA46xqht+WrFEWZk9gugIa96Jab1tSyk7Mvg3uZOTKp7nXTKJ9e2LEvOOk9Z2cbVJDIkXjyGdG0uFG8kA+KTnOu8Hk6XO7RWlOPw9+ERSm/wzI1fE2ANBQ2bRRWFPyeBvFobHysVxvc6LiubUatkcrOttof0n2q8f/U0XSvgamD+jq7mlZpAA/FxmU3nAeIipWcQRdsnLi9+9ZQU5iluLZeuaoIU8IbUH6GvsNOcHxfykb6azNJ4JieXoJdq7ok1FMpnHO5hvXPEO62hXp3ISCHoXNPnw6l7ko6tnbQyDUs+riuWTC0RbKOKbRZvMiUZFOozvfLbKfFHToJ3JuE6BXzhx+kJGIBQUAryzYPuVJkQNDRs5Hf+eTrhuwbfPKrL0YKCidfcBMLgaNsXtZHCaNd9SItxUbdabRM674nC5OIqeLzkQO0+hKCbFYxhr0gSFzOkgiA2nsL4VzPhskv7AONtujhoEGi/lm3BU+VAVi4+lj4FywE7W8p3FQIpmFl701tVI1iT6WAnmIWCG5Xwj2QWJcgOdGEJvVTeklpC1G0Aq1cc7mm5k9Fbdk9x3rs=";
+  fibo-fnd-agr-ctr:hasExecutionDate "2022-09-07 10:25:52.749000+00:00"^^xsd:dateTime .
+
+:ob_1e5293a0-2e98-11ed-be7d-3f8589292a29 dct:description "PPBfuou1IegLIVv+CEQVaN4g7vb1638girV1aE0U0Ht73IwWScdbt+R9ladH/LNPWS3yovYjqJsb7q2tuwvcK51JXvRLEAZBXmDDaa0yZIy9XnOMmgF3jyFqdXsvgg/YCrdNy9766irYIpjfgLs0Y3sm+ipcf0P91z2d5RO/HOAiFjo4NHSHYtwZovn8pVWdGI96y3DwL4rMvpkCIubavog/f6LHjdV0WD8PBWCdRI5J/JgEmR9+3mVjzz8kjbIHVt5at7jdi6nSLnintFh2eh3MYhKxxIjXlc99HgRRgdzM/aDTagSE6prfXfmP/1/qi0/nP1Qra2Pn3Q2AWv2Jq7pi+O6eIfHVhJmca1mcNvWoXR5EWkOfW4fL+GDxwukX6dfxUudW5yJKXvYepM19vtCwJtSXCQrhdXwl+iYZHu+Mo2VaonN9QmcoEHok6O1AwtT/HBIwNzWmr1fYtAcBwOdPWi6MDbl5NBchsrjqs7VnMV4MHGLORDyd8s3/V/DDBTUASA8GUCWQsktp6/Il1tckzSiB9wZ9lI62THWWABzvmwKawwWA6Z7h9bWQzam3liBV1+y4+7lPw9utiVfDecXvDShzlqCgl7bquraxuTq/pIZmWJNoat+VEQWU34WGws8nuSnH9SWw2bAVc3ExTT8JMTdfTt7nuCK4c1arjvE=";
+  fibo-fnd-agr-ctr:hasExecutionDate "2022-09-07 10:25:52.749000+00:00"^^xsd:dateTime .
+
+:ob_2ad5cb10-2e98-11ed-be7d-3f8589292a29 dct:description "fYYgaFt1syuBsz18zAtT5Q8Oj92gLiPcT5OTrOUzCCfSp8fXC1/ePLObNPgGOTswZAKZVahTp7XdnxXmUlTU7Rk0kF6YPDCqt5e9XeEMn629FzlCSNH0/nx3U99dPfmbLxAUxKlXUtutNgLuwJNCD6MpzyLllM8T/MjFUcmdKa/7V8//Q+IHazAhxr9i8LrRE6f97nuYcs50Ei8Y36bwoLxZlfgdZQN/S0pm6hksZ09/fRSnugLc4wYf1Su1Y1IsBiG1ohZuHFJVXCTr/OVCcEppL3jxn3PgobvOaUCjSjUz6IxnbjBlTEDYMCVEhu1NffCavxY3SLliRj0HlLCqOBmhNqpN5usdhBQI9QaaCOZHjR6eoaxaG7+RfaQfa1RZwIlit1oDhL58y7kr/m8L9spDsYpa2BuVLdPJL2FGRPAG3qAvtnYnBJx+uMAv3t9b5izZPbsm4V1fsdahYYlsUL4BDcq3ny/y1R+B4I7BczeBXPNllZkBP+PRYF+dcnH2AkmIjxwgxrFA3nwADSeW7M2Jqhl2njpGow/LeXp6iPKQ7Gsi+FDGTvOHJhySYMokPdi83Q5070IkRlhFq+JE7XFzG7nZzEKNCUS0hKIEU1zgLt6N3lh3vmnELkY7fwhYvu5ArUYHsYacYRRL6+4wGfj07OYj+50iPJ4h9bDYmm0=";
+  fibo-fnd-agr-ctr:hasExecutionDate "2022-09-07 10:25:52.749000+00:00"^^xsd:dateTime .
+
+:term_b3dfd144-2e98-11ed-be7d-3f8589292a29 dct:description "updated SmashHit data sharing term" .
+
+:term_d6562ebc-2e98-11ed-be7d-3f8589292a29 dct:description "data sharing and processing in smashHit" .
+
+
+
+
+
+:term_e73a4a6c-2ed2-11ed-be7d-3f8589292a29 dct:description "data sharing term for Scott and Tim" .
+
+:ob_92c7a31a-2ed4-11ed-be7d-3f8589292a29 dct:description "lAdliukfR/+dWEUnaFIMGKys9vLfaJISaUt536pN7rjNqG7V6yKKyqmhakDHnEntswuHhfUhaEPc8aQdR1x2Hg==" .
+
+:ob_9e2bb1ce-2ed4-11ed-be7d-3f8589292a29 dct:description "HaYRkfbFhvn5eerbqV6lnDckfnBQIRnACZDsYloyjteATU1bsOxH0MaJuI9K+fid/yoMOmCjBvdgQDQ2t2P5wg==" .
+
+:term_e271c6de-2ed4-11ed-be7d-3f8589292a29 dct:description "data processing term for Tim and Alice" .
+
+:term_type_4412c812-2f51-11ed-be7d-3f8589292a29 dct:description "3qtcpQodWgGu0lEUIpMf/8m0LyN69/noc2nfrlknlL/EbbOF0GiDTKpkZKnoaZDzG6FZ5BmN+8wCF0+DdzjxdQ==" .
+
+:term_87edc15e-2f51-11ed-be7d-3f8589292a29 dct:description "SmashHit data sharing term" .
+
+:term_type_87f83652-2f51-11ed-be7d-3f8589292a29 dct:description "eblup+anoh1gJ8EdoC+G8hTK0HE9MhAdEIxhO+vX5JlHYMxKD5ZsnKo31mE9CKRtzzoSUCNrptm6DdOPDngPhg==" .
+
+:term_20e73fb6-2f52-11ed-be7d-3f8589292a29 dct:description "SmashHit data sharing term" .
+
+:term_type_20f1123e-2f52-11ed-be7d-3f8589292a29 dct:description "ZKr2zXbU9yBG6sr3sH7CSJWx2NjNyb2UObjmCVyPHQK9cQmbOaS/CauH3PdZ77IKyXvUAaPXgYUJC86aUuHjOA==" .
+
+:term_4276daf6-2f52-11ed-be7d-3f8589292a29 dct:description "SmashHit data sharing term" .
+
+:term_type_428125a6-2f52-11ed-be7d-3f8589292a29 dct:description "MOKyNDWRMdjjVNt/plxhJuL9ZjTQ/9OF/Xj64YcspU9aju93vvyWETkXDC+Y50dQRC54p2ZF77QlASMdPW555g==" .
+
+:term_b6a49864-2f52-11ed-be7d-3f8589292a29 dct:description "SmashHit data sharing term" .
+
+:term_type_b6afbdde-2f52-11ed-be7d-3f8589292a29 dct:description "Bjyp4ggawH0HT7yCD4vUnzuRh/9rfAkIFPRsX0OsHUqzGvF1DWrjipqXa0y1RazMewvFMbFBySdeAjEF7gZaKg==" .
+
+:term_9c94d230-2f53-11ed-be7d-3f8589292a29 dct:description "SmashHit data sharing term" .
+
+:term_type_9c9dfd7e-2f53-11ed-be7d-3f8589292a29 dct:description "RdtOMlVAA7inf7a2LKUWq4fOxRk40WvTd/ZgNnGYitjd69Vujfk9yGdHzotGSDb5Ea9jPPrdMITg1SaHvTiPyA==" .
+
+:term_ae06c118-2f53-11ed-be7d-3f8589292a29 dct:description "SmashHit data sharing term" .
+
+:term_type_ae12c9d6-2f53-11ed-be7d-3f8589292a29 dct:description "nSIgq1igNU7rmrci+r2pf1touzY5jig/7GZBZl3Cpyim4FtO9/B0yZITJTsZsaGtC7VjyzwBRqjAtAlujR61ng==" .
+
+:term_d3ce13c4-2f53-11ed-be7d-3f8589292a29 dct:description "SmashHit data sharing term" .
+
+:term_type_d3e613ca-2f53-11ed-be7d-3f8589292a29 dct:description "2h0o5JGiS39HWVU1liPPMOMv3R9DN8T+NkT8LP0TmeVOJYGJjBjR0T0E9gIKSPcjthGx9WrOy4WNKaS8CmWMsg==" .
+
+:term_f6c929fe-2f53-11ed-be7d-3f8589292a29 dct:description "SmashHit data sharing term" .
+
+:term_type_f6e448c4-2f53-11ed-be7d-3f8589292a29 dct:description "JeGU3H3g1RUFID4nteJPv2LSVyDlP5G1Ls9r/A+hjq+BGnx5dww4U4VwqoTmv92zrHE8XU055GrFysCsqRlVHQ==" .
+
+:ExpirationDate dct:description "The expiration date of consent."@en .
+
+:term_type_b00d9f78-56d0-11ed-8ce7-bb796b1450fe dct:description "W4iiK1R/J8CvBMsYSISxWuQovpEJs5D0n0w9N+P5nyY=" .
+
+:term_type_ec0a2c94-56d0-11ed-8ce7-bb796b1450fe dct:description "r1kKCpxGoN6T5yYJNKiZnhl9H8HcKFLA4dXDII0VTc4=" .
+
+:term_type_0bc0702a-56d1-11ed-8ce7-bb796b1450fe dct:description "2HEkYgj29haO3c+P3HFcKxreR/ASpiaaSDaoyykgHrA=" .
+
+:term_type_88d09018-56d1-11ed-8ce7-bb796b1450fe dct:description "YYY+U6+wi5ZrnWdJsid5RbrdMwTEMGit+yjTSLH+LsE=" .
+
+:term_type_b7c0258e-56d4-11ed-8ce7-bb796b1450fe dct:description "qy7FVs9sUOWiSbUbsnodfwj9+hUGchyl6QcfV/MsPq8=" .
+
+:term_type_02627664-56d5-11ed-8ce7-bb796b1450fe dct:description "F0vlpdUqOQu/ULA056E1bl5jA3D5MxY+EYyi+cRe9sU=" .
+
+:term_type_470a63c6-56d5-11ed-8ce7-bb796b1450fe dct:description "5sm84oyviVR8NS6bhoHES7FXWreIvl0dSg5uwmqAuRQ=" .
+
+:term_type_7456ed40-56d5-11ed-8ce7-bb796b1450fe dct:description "gZamQlj0C4EoLPmXBu39RjDC2M0UpDGlJsdtyjlvevQ=" .
+
+:term_type_a6d76ed4-56d5-11ed-8ce7-bb796b1450fe dct:description "ril5u9HAgOeN1Y0CXYy+xp7bAPZEm4zcV1BY+DLUHd8=" .
+
+:term_type_124266c4-56d6-11ed-8ce7-bb796b1450fe dct:description "eip4FdBr0GbH1SGrBORL782b2ddts7uTrynHmecWEYI=" .
+
+:term_type_4dcf012a-56d6-11ed-8ce7-bb796b1450fe dct:description "zxDMSep/DG7sitdntdsr7GSV4V2B8/P5i3EfBPNoIcA=" .
+
+:term_type_75cfc97a-56d6-11ed-8ce7-bb796b1450fe dct:description "Marchmslft44bV0F1WCAGt7Wf3EQ23jwpfdUrDYljT8=" .
+
+:term_type_a339c07a-56d9-11ed-bdc0-6dbbddf017b8 dct:description "j89f31DsqTgZ3ODXEXmlfL2BXfj+Tw+WTWHk8U4MQoA=" .
+
+:term_type_d1e72e62-56d9-11ed-bdc0-6dbbddf017b8 dct:description "a+7O9n3TnF0ssDH85QQVk/gf17p/Hqt0FeCXDS2f0/c=" .
+
+:term_type_e40a93cc-56d9-11ed-bdc0-6dbbddf017b8 dct:description "haLhFVEZOYVh9n4jkKWEllP4HP14HWyH9p6J/YUG5u4=" .
+
+:term_type_0f46265a-56da-11ed-bdc0-6dbbddf017b8 dct:description "qTYvPNwbyVeP5rcfv0SlcP/Uii9FblnP45Re+DqWiuo=" .
+
+:term_type_21b7ed32-56da-11ed-bdc0-6dbbddf017b8 dct:description "2eZdcVdjMEKoYwGvUCdgr69kHNI+L6m3NIiyKm8XDtM=" .
+
+:term_type_47086580-56da-11ed-bdc0-6dbbddf017b8 dct:description "lj/tLSzgt2rPVToVXABnjl8JSnSu89rZzIXiOFRPuW4=" .
+
+:term_type_6588ca4a-56da-11ed-bdc0-6dbbddf017b8 dct:description "qeBPq+L73iSa/0hkkuH7d64n2O/P3OnmuNa8tmEm70Q=" .
+
+:term_type_7e8732a6-56db-11ed-bdc0-6dbbddf017b8 dct:description "mYHnc4+vkutUE0sA4oLjU6zZZE0Co3tFlAu38cBz/GI=" .
+
+:term_type_8ae69a3c-56db-11ed-bdc0-6dbbddf017b8 dct:description "CwnHXLWartLv8om/XW/wUSjLL9bn6dYVQNmXMf1zLvE=" .
+
+:term_type_cea23dc6-56db-11ed-bdc0-6dbbddf017b8 dct:description "8XPqDZUkxk0QbzDihBF1oib3alcFnLBYHnwjQ9hOO3s=" .
+
+:term_type_dacd971c-56db-11ed-bdc0-6dbbddf017b8 dct:description "fSZN/kTNS3hQMGG2P0RZE3wtGo3sq3arvJ2xh1KJSTA=" .
+
+:term_type_0a8a60b6-56dc-11ed-bdc0-6dbbddf017b8 dct:description "MRUO08uCcDJADm9oQdfXH6sjihPgqdfs0QSAwxJC4Go=" .
+
+:term_type_0f75d8e4-56dc-11ed-bdc0-6dbbddf017b8 dct:description "j1jPSBmujRygvVYyhCr9yM3Dv0FPYZQeYafMCOO35+g=" .
+
+:term_type_1d8b0148-56dc-11ed-bdc0-6dbbddf017b8 dct:description "Ym20GRSiO8UiP9l+sc7lPmozMRTFHlKv57RFYSrELYI=" .
+
+:term_type_416e4ec6-56dc-11ed-bdc0-6dbbddf017b8 dct:description "nQDbgGjrbISOylC+Jc1bMS2jwql/aSuMe+96gaRpfN0=" .
+
+:term_type_5c2fb628-56dc-11ed-bdc0-6dbbddf017b8 dct:description "AvJ+WYaXI75oEoNbkUEpIBuSHImcO0nKeh6epPnuXGA=" .
+
+:term_type_a994f1ee-56dc-11ed-bdc0-6dbbddf017b8 dct:description "VgqARO3kcgIk0WBxr/ht53O92ny0SJUH7iQyyui5OqY=" .
+
+:term_d520e94e-a303-11ed-b1bc-0b613fb8badf dct:description "data sharing term for data subject and data processor" .
+
+:ob_28583404-a305-11ed-b1bc-0b613fb8badf dct:description "3AjKgYtC7kASNDhT9tNUyZuAPN8+fHf5ioKLN8+bQPAUS+qroDVpd1tGetJuvPdQfkCDqlgIxrfOvY1KWENFUQ==" .
+
+:ob_4a939d88-a305-11ed-b1bc-0b613fb8badf dct:description "48ihi12PE52ot4jdlYnM3dk0DoWmSUdi2/GfSC3fNkDVRsc1moGM/8MZ+9VSvfbHizMHbQK8BZDwYx0q7ofNAQ==" .
+
+
+
+
+
+:contb2b_e45dc546-2e9e-11ed-be7d-3f8589292a29 :hasContractCategory :categoryBusinessToBusiness;
+  :hasContractStatus :statusPending;
+  :hasEndDate "2023-05-01 10:38:07.617000+00:00"^^xsd:dateTime;
+  :inMedium "online";
+  fibo-fnd-agr-ctr:hasEffectiveDate "2023-04-01 10:38:07.617000+00:00"^^xsd:dateTime;
+  :consentID "";
+  :contractID "contb2b_e45dc546-2e9e-11ed-be7d-3f8589292a29";
+  :hasContractors :c_096dc6f4-2e97-11ed-be7d-3f8589292a29, :c_356d371c-2e97-11ed-be7d-3f8589292a29;
+  :hasSignatures :sig_fe4e269a-2e98-11ed-be7d-3f8589292a29, :sig_0d930c10-2e99-11ed-be7d-3f8589292a29;
+  :hasTerms :term_d6562ebc-2e98-11ed-be7d-3f8589292a29 .
+
+:contb2cb2b_f6a0cd74-2f53-11ed-be7d-3f8589292a29 fibo-fnd-agr-ctr:hasExecutionDate "2024-04-20 10:38:07.617000+00:00"^^xsd:dateTime;
+  :hasContractCategory :categoryBusinessToConsumer, :categoryBusinessToBusiness;
+  :hasContractStatus :statusCreated;
+  :hasEndDate "2024-07-07 10:38:07.617000+00:00"^^xsd:dateTime;
+  :inMedium "online";
+  fibo-fnd-agr-ctr:hasEffectiveDate "2024-04-01 10:38:07.617000+00:00"^^xsd:dateTime;
+  :consentID "cons_001";
+  :contractID "contb2cb2b_f6a0cd74-2f53-11ed-be7d-3f8589292a29";
+  :hasContractors :c_356d371c-2e97-11ed-be7d-3f8589292a29, :c_6a094420-2e97-11ed-be7d-3f8589292a29;
+  :hasSignatures :sig_0d930c10-2e99-11ed-be7d-3f8589292a29, :sig_1c5e38e6-2e99-11ed-be7d-3f8589292a29;
+  :hasTerms :term_b3dfd144-2e98-11ed-be7d-3f8589292a29 .
+
+:contb2c_f6172eaa-a2e6-11ed-b1bc-0b613fb8badf fibo-fnd-agr-ctr:hasExecutionDate "2024-04-20 14:14:25.718000+00:00"^^xsd:dateTime;
+  :hasContractCategory :categoryBusinessToConsumer;
+  :hasContractStatus :statusUpdated;
+  :hasEndDate "2024-07-07 14:14:25.718000+00:00"^^xsd:dateTime;
+  :inMedium "";
+  fibo-fnd-agr-ctr:hasEffectiveDate "2024-04-01 14:14:25.718000+00:00"^^xsd:dateTime;
+  :consentID "2e0c2cc4bc0c4e1b";
+  :contractID "contb2c_f6172eaa-a2e6-11ed-b1bc-0b613fb8badf";
+  :hasContractors :c_096dc6f4-2e97-11ed-be7d-3f8589292a29, :c_6a094420-2e97-11ed-be7d-3f8589292a29;
+  :hasSignatures :sig_fe4e269a-2e98-11ed-be7d-3f8589292a29, :sig_1c5e38e6-2e99-11ed-be7d-3f8589292a29;
+  :hasTerms :term_d520e94e-a303-11ed-b1bc-0b613fb8badf, :string.
+
+:ob_28583404-a305-11ed-b1bc-0b613fb8badf fibo-fnd-agr-ctr:hasExecutionDate "2023-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasEndDate "2024-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasStates :statePending;
+  :contractorID "c_6a094420-2e97-11ed-be7d-3f8589292a29";
+  :obligationID "ob_28583404-a305-11ed-b1bc-0b613fb8badf";
+  :fulfillmentDate "2025-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasContractIdB2C "contb2c_f6172eaa-a2e6-11ed-b1bc-0b613fb8badf" .
+
+:ob_4a939d88-a305-11ed-b1bc-0b613fb8badf fibo-fnd-agr-ctr:hasExecutionDate "2023-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasEndDate "2024-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasStates :statePending;
+  :contractorID "c_096dc6f4-2e97-11ed-be7d-3f8589292a29";
+  :obligationID "ob_4a939d88-a305-11ed-b1bc-0b613fb8badf";
+  :fulfillmentDate "2025-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasContractIdB2C "contb2c_f6172eaa-a2e6-11ed-b1bc-0b613fb8badf" .
+ 
+
+:contb2c_f6172eaa-a2e6-11ed-b1bc-0b613fb8bada fibo-fnd-agr-ctr:hasExecutionDate "2023-04-20 14:14:25.718000+00:00"^^xsd:dateTime;
+  :hasContractCategory :categoryBusinessToConsumer;
+  :hasContractStatus :statusUpdated;
+  :hasEndDate "2023-07-07 14:14:25.718000+00:00"^^xsd:dateTime;
+  :inMedium "";
+  fibo-fnd-agr-ctr:hasEffectiveDate "2023-04-01 14:14:25.718000+00:00"^^xsd:dateTime;
+  :consentID "2e0c2cc4bc0c4e1b";
+  :contractID "contb2c_f6172eaa-a2e6-11ed-b1bc-0b613fb8bada";
+  :hasContractors :c_096dc6f4-2e97-11ed-be7d-3f8589292a29, :c_6a094420-2e97-11ed-be7d-3f8589292a29;
+  :hasSignatures :sig_fe4e269a-2e98-11ed-be7d-3f8589292a29, :sig_1c5e38e6-2e99-11ed-be7d-3f8589292a29;
+  :hasTerms :term_d520e94e-a303-11ed-b1bc-0b613fb8badf, :string.
+
+
+:ob_28583404-a305-11ed-b1bc-0b613fb8bada fibo-fnd-agr-ctr:hasExecutionDate "2023-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasEndDate "2024-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasStates :statePending;
+  :contractorID "c_6a094420-2e97-11ed-be7d-3f8589292a29";
+  :obligationID "ob_28583404-a305-11ed-b1bc-0b613fb8badf";
+  :fulfillmentDate "2023-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasContractIdB2C "contb2c_f6172eaa-a2e6-11ed-b1bc-0b613fb8badf" .
+
+:ob_4a939d88-a305-11ed-b1bc-0b613fb8bada fibo-fnd-agr-ctr:hasExecutionDate "2023-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasEndDate "2024-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasStates :statePending;
+  :contractorID "c_096dc6f4-2e97-11ed-be7d-3f8589292a29";
+  :obligationID "ob_4a939d88-a305-11ed-b1bc-0b613fb8badf";
+  :fulfillmentDate "2023-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasContractIdB2C "contb2c_f6172eaa-a2e6-11ed-b1bc-0b613fb8badf" .
+
+
+
+
+:contb2c_f6a0cd74-2f53-11ed-be7d-3f8589292a29 :hasContractCategory :categoryBusinessToConsumer;
+  :hasContractStatus :statusPending;
+  :hasEndDate "2023-05-01 17:14:32.687000+00:00"^^xsd:dateTime;
+  :inMedium "online";
+  fibo-fnd-agr-ctr:hasEffectiveDate "2023-04-01 17:14:32.687000+00:00"^^xsd:dateTime;
+  :consentID "";
+  :contractID "contb2c_f6a0cd74-2f53-11ed-be7d-3f8589292a29";
+  :hasContractors :c_534882e8-2ed1-11ed-be7d-3f8589292a29, :c_729c70aa-2ed1-11ed-be7d-3f8589292a29;
+  :hasSignatures :sig_86020f1a-2ed1-11ed-be7d-3f8589292a29, :sig_94bb8c66-2ed1-11ed-be7d-3f8589292a29;
+  :hasTerms :term_e271c6de-2ed4-11ed-be7d-3f8589292a29, :string .
+
+:ob_28583404-a305-11ed-b1bc-0b613fb8badf fibo-fnd-agr-ctr:hasExecutionDate "2023-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasEndDate "2024-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasStates :statePending;
+  :contractorID "c_6a094420-2e97-11ed-be7d-3f8589292a29";
+  :obligationID "ob_28583404-a305-11ed-b1bc-0b613fb8badf";
+  :fulfillmentDate "2023-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasContractIdB2C "contb2c_f6172eaa-a2e6-11ed-b1bc-0b613fb8badf" .
+
+:ob_4a939d88-a305-11ed-b1bc-0b613fb8badf fibo-fnd-agr-ctr:hasExecutionDate "2023-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasEndDate "2024-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasStates :statePending;
+  :contractorID "c_096dc6f4-2e97-11ed-be7d-3f8589292a29";
+  :obligationID "ob_4a939d88-a305-11ed-b1bc-0b613fb8badf";
+  :fulfillmentDate "2023-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasContractIdB2C "contb2c_f6172eaa-a2e6-11ed-b1bc-0b613fb8badf" .
+
+:ob_28583404-a305-11ed-b1bc-0b613fb8badf fibo-fnd-agr-ctr:hasExecutionDate "2023-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasEndDate "2024-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasStates :statePending;
+  :contractorID "c_6a094420-2e97-11ed-be7d-3f8589292a29";
+  :obligationID "ob_28583404-a305-11ed-b1bc-0b613fb8badf";
+  :fulfillmentDate "2023-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasContractIdB2C "contb2c_f6172eaa-a2e6-11ed-b1bc-0b613fb8bada" .
+
+:ob_4a939d88-a305-11ed-b1bc-0b613fb8badf fibo-fnd-agr-ctr:hasExecutionDate "2023-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasEndDate "2024-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasStates :statePending;
+  :contractorID "c_096dc6f4-2e97-11ed-be7d-3f8589292a29";
+  :obligationID "ob_4a939d88-a305-11ed-b1bc-0b613fb8badf";
+  :fulfillmentDate "2023-02-02 14:07:31.298000+00:00"^^xsd:dateTime;
+  :hasContractIdB2C "contb2c_f6172eaa-a2e6-11ed-b1bc-0b613fb8bada" .
+
+:ob_9e2bb1ce-2ed4-11ed-be7d-3f8589292a29 fibo-fnd-agr-ctr:hasExecutionDate "2022-09-07 17:14:13.345000+00:00"^^xsd:dateTime;
+  :hasEndDate "2023-09-07 17:14:13.345000+00:00"^^xsd:dateTime;
+  :hasStates :statePending;
+  :contractorID "c_729c70aa-2ed1-11ed-be7d-3f8589292a29";
+  :obligationID "ob_9e2bb1ce-2ed4-11ed-be7d-3f8589292a29";
+  :fulfillmentDate "2022-09-07 17:14:13.345000+00:00"^^xsd:dateTime;
+  :hasContractIdB2C "contb2c_51e561c2-2ed2-11ed-be7d-3f8589292a29" .
+
+:ob_92c7a31a-2ed4-11ed-be7d-3f8589292a29 fibo-fnd-agr-ctr:hasExecutionDate "2022-09-07 17:14:13.345000+00:00"^^xsd:dateTime;
+  :hasEndDate "2023-09-07 17:14:13.345000+00:00"^^xsd:dateTime;
+  :hasStates :statePending;
+  :contractorID "c_534882e8-2ed1-11ed-be7d-3f8589292a29";
+  :obligationID "ob_92c7a31a-2ed4-11ed-be7d-3f8589292a29";
+  :fulfillmentDate "2022-09-07 17:14:13.345000+00:00"^^xsd:dateTime;
+  :hasContractIdB2C "contb2c_51e561c2-2ed2-11ed-be7d-3f8589292a29" .
+
+:cm_c487000a-2851-11ed-ae8f-f11f24693005 :hasCountry "dummy";
+  :hasCreationDate "2022-08-30 10:51:05.081000+00:00"^^xsd:dateTime;
+  :hasEmail "dummy@hotmail.com";
+  :hasName "dummy";
+  :hasPostalAddress "dummy";
+  :hasTelephone "068864133065";
+  :hasTerritory "Innsbruck";
+  :companyID "cm_c487000a-2851-11ed-ae8f-f11f24693005";
+  :hasVATIN "000000000000" .
+
+:cm_e801743e-2851-11ed-ae8f-f11f24693005 :hasCountry "Austria";
+  :hasCreationDate "2022-08-30 10:51:05.081000+00:00"^^xsd:dateTime;
+  :hasEmail "abc@hotmail.com";
+  :hasName "Company ABC";
+  :hasPostalAddress "Techniker strasse 7";
+  :hasTelephone "068864133065";
+  :hasTerritory "Innsbruck";
+  :companyID "cm_e801743e-2851-11ed-ae8f-f11f24693005";
+  :hasVATIN "000000000000" .
+
+:c_096dc6f4-2e97-11ed-be7d-3f8589292a29 :hasCountry "NeUKmmiWY7LtUal34AfSN9ZalkCxvVvM0MEimmyniXQ=";
+  :hasCreationDate "2022-09-07 12:22:55.151920"^^xsd:dateTime;
+  :hasEmail "oD6IF44/HELVNos1e3ijZj/saxVXqZZ3BOnsSvHlHV2eyvFRhaPYDiSZw0xxxsCa";
+  :hasName "seNEiXFxS4+aJkV3FNLbwdrjT2YyTZlMYBzHaQpwH1UdQowG2F1VUnB2nRPQQsZ6";
+  :hasPostalAddress "kbbsoYG6EydgDM4z+0ofdJDs9FSziMJogwD25b5N6fVX3g28U+D7Kk1tcF20ZWFf";
+  :hasTelephone "bu/te2pM8ADeoy/WbMoz+x7yUPTk+fqz/EOouxNyLM8=";
+  :hasTerritory "pu9TBGmStuUuMXeA3RjCe4mgLX7MO1YP1/LCzP23h0E=";
+  :contractorID "c_096dc6f4-2e97-11ed-be7d-3f8589292a29";
+  :hasCompany "cm_e801743e-2851-11ed-ae8f-f11f24693005";
+  :hasVATIN "4fFv0Jb1swMsZDW1UuHWDoY0uuBB5Ce46x67ZLzaaV8=" .
+
+:c_356d371c-2e97-11ed-be7d-3f8589292a29 :hasCountry "Rm54QR6u2Jkqsrbd9JzgWCoZqzLTpYZEWhGkDI2MrOw=";
+  :hasCreationDate "2022-09-07 12:24:08.967873"^^xsd:dateTime;
+  :hasEmail "zcWQtUUOFYi6Vk0/+Hz1ZxRTiFq/FiRev78qIx0S11UzhBgUmPIDgwPzqGYopcyS";
+  :hasName "netgkxOze8AYQtApiOVWU5orlbjmVEzGjq+1FF4C1JQ=";
+  :hasPostalAddress "lv4Ggh5no32FyKx8DA79W0PlL66wt9Qq3e/PkK+OnUs5+WcQxKgK3S8S3CspXG00";
+  :hasTelephone "gIfvskIVPVAEeOJY831mTHQeQ37JuDjF6+FKbz6zRvc=";
+  :hasTerritory "LICL/3uZv2hGCLj4oSOxF30xbu09f0d8I5vocgk08cs=";
+  :contractorID "c_356d371c-2e97-11ed-be7d-3f8589292a29";
+  :hasCompany "cm_e801743e-2851-11ed-ae8f-f11f24693005";
+  :hasVATIN "60h0DXAx52DiayKT4B+/Kk149CMMdv8IvG0gwWj32LM=" .
+
+:c_6a094420-2e97-11ed-be7d-3f8589292a29 :hasCountry "X/s0XmCwTD8lcFeDx9AS3VC6V9O7hNnMMX9kSRwKY5U=";
+  :hasCreationDate "2022-09-08 10:55:19.387931"^^xsd:dateTime;
+  :hasEmail "Yw/XZEtyBuyuuuRqGB8p7NIxeQ94mH0Tv/hz80I7M9T8OflDjJgk+uia0EW7te4X";
+  :hasName "SfLBgLbFP2hDtrEhHUc3KuWauB1vMAgbEVhX3LNAX/0=";
+  :hasPostalAddress "p7i+gcEE61mokZp9KvC07fLiKL0lBGXKxAUac8JJHC52WFGPgTresUlA4Uo3n3ocznYq6BXtKc7g8hdOw1GFew==";
+  :hasTelephone "FL5A6uMpTE8U+qe6NtVYFa1d3CTxuQKHa2IcbOisdx4=";
+  :hasTerritory "cNbsQpiDGOnhxJ29J3px5cLvz3/RIf8tzg2wUR199ig=";
+  :contractorID "c_6a094420-2e97-11ed-be7d-3f8589292a29";
+  :hasCompany "cm_c487000a-2851-11ed-ae8f-f11f24693005";
+  :hasVATIN "K0pdgkY/TcJ+CCa/1ke1/DGRPCE3rCpl8bskJrUWBMk=" .
+
+:c_32c4336e-2ed1-11ed-be7d-3f8589292a29 :hasCountry "7WK2J6zVptqRn4WCvGU9g3MM9613fqFP06iOm9cFsW0=";
+  :hasCreationDate "2022-09-07 19:19:15.336456"^^xsd:dateTime;
+  :hasEmail "tR8NSyFydhLhvNYS1vEh+S6kGj4/0nmIERiSswv6q/E=";
+  :hasName "9+FIREfDzQ/oWasbMPctJ5HU0jYX4Y8QD8zjT1Buf8I=";
+  :hasPostalAddress "aYJFKpHVUKc/9mxhik6duJ8gcXR2KCRG8ouEZK7vpIo=";
+  :hasTelephone "RqXAmFc6pogvl3wVNm/4Zz13K5vC01XCrxZlYyC+5yc=";
+  :hasTerritory "4XVTu0/T8tlO/VYdRXxPzYG6wYz6/5+XnuTNd/PVfh4=";
+  :contractorID "c_32c4336e-2ed1-11ed-be7d-3f8589292a29";
+  :hasCompany "cm_c487000a-2851-11ed-ae8f-f11f24693005";
+  :hasVATIN "rYO5tZXLXpGc1OHryafEUjx9w7ZNyose4H0RyQh/msI=" .
+
+:c_534882e8-2ed1-11ed-be7d-3f8589292a29 :hasCountry "Pm6jofv2NA0o4+SJbyr1otnfKMBhI/M+yH08ANCyct8=";
+  :hasCreationDate "2022-09-07 19:20:09.870052"^^xsd:dateTime;
+  :hasEmail "u6vLN7/2oO/p0CR3tIYbi9a4Oal89S8RdkReIZiBe7c=";
+  :hasName "5msM7zyXghBt5uBP80icDLAAolbNdi0jYFrtp1THVYc=";
+  :hasPostalAddress "gP7GLkeByZnf9Dk7GCfcK4OGvs16hFeN+faEOKk7uuY=";
+  :hasTelephone "bPSuJL0/eYGEdYifMf8Qj+k8NgEf6h6aUySThR9azoM=";
+  :hasTerritory "CyJ0GhyZwedE9UzJcBy18gCoL1GNuPABViKYWF0SvI4=";
+  :contractorID "c_534882e8-2ed1-11ed-be7d-3f8589292a29";
+  :hasCompany "cm_c487000a-2851-11ed-ae8f-f11f24693005";
+  :hasVATIN "wvhrF3Qh6Gd/+oaHZdLzaoJG751oQB6ENS/yXdOk+lE=" .
+
+:c_729c70aa-2ed1-11ed-be7d-3f8589292a29 :hasCountry "Y8jR3EbM07NYma+yshjoITJUjApxRGwP70qaBRUrtk8=";
+  :hasCreationDate "2022-09-07 19:21:02.429192"^^xsd:dateTime;
+  :hasEmail "INNa+hwLtcK0D5RC3TzjCr0IbMDQXak6UioAmXjE4Fw=";
+  :hasName "Hu/H9UE9mqkHC/ZqjxnLA9fR+7+nUscDrGgWqmcRA7M=";
+  :hasPostalAddress "On3DtrA4C1yT+F7C8JUFEDqbOjckrpc41N8SAuQBQNA=";
+  :hasTelephone "WumbsvizMMgUaKQHuLO597jEZ8FUEJk0n+uycQ31wdY=";
+  :hasTerritory "gOjBxnz9gLUIyUXpRq0izmxjYbHYzl5Ya43lIUE/6PA=";
+  :contractorID "c_729c70aa-2ed1-11ed-be7d-3f8589292a29";
+  :hasCompany "cm_c487000a-2851-11ed-ae8f-f11f24693005";
+  :hasVATIN "L6yCOEj/K0pog+gVos0ZQ6iPEn2zBouOVDnNLxMCuwI=" .
+
+:c_43eecc50-2f51-11ed-be7d-3f8589292a29 :hasCountry "/Vzg/hk3xOYDyVggG6+RqgSv7LQMY/oJCmXNMC7Nx18=";
+  :hasCreationDate "2022-09-08 10:35:59.698380"^^xsd:dateTime;
+  :hasEmail "FL9eJYjS4UH9yqEIpe40gSLPgM4178NZpXQTvl7m7GJXcB9xNVmvOWFwsQgIiQm0";
+  :hasName "rOoQkWqHiz3mBnFIQLThmLnVmeH4SuRnS3ret3jnWvQ=";
+  :hasPostalAddress "ewAiR9Ps9QCgdTQopS4Djq21JoR9TvGddabcNiA8+QAlI6EtVDuvKgINajc8j18Uc7EN+yllh7xq+l61yeHcDw==";
+  :hasTelephone "+qtZXmMSIF/LTmT3O0rSvVi39vxiK5dLp43bYlFP3yU=";
+  :hasTerritory "Zu+0K3G7+DEsrlP7LvoaCRvqh5ggoiS8cOoRsPX5HQA=";
+  :contractorID "c_43eecc50-2f51-11ed-be7d-3f8589292a29";
+  :hasCompany "cm_c487000a-2851-11ed-ae8f-f11f24693005";
+  :hasVATIN "iLexZNLep/pprGtV2gLThllPN+7EaYM1nultY4l4vn8=" .
+
+:c_d3d58b40-2f53-11ed-be7d-3f8589292a29 :hasCountry "cPaDHFpeW4tyJT+gyv5rAQ5otWbX5RVqtzEZVTwY9Gk=";
+  :hasCreationDate "2022-09-08 10:54:20.116955"^^xsd:dateTime;
+  :hasEmail "MNjIIYcT7e6uqhCYEQhGrnioIbD0zBZDCa8+Xd1+eCkYEeJi4GddZS5QxG4Zupdf";
+  :hasName "u6wlGvR8UjzR8paejdhclF89LYPx5FJJvw/OPXFuFzQ=";
+  :hasPostalAddress "I5trR+pkiblvAGxAFQaTkNu4WOakSyDUHiDDSJ3DVM1K7FS1c3WQAn+odb86sZfCzz+DdQBVymD3wpgjNeSvsA==";
+  :hasTelephone "L145e9V+R4d68HNRhVbRBkS6qTP+o62U1MAO4O8/EUw=";
+  :hasTerritory "bcDTHf6FWhE+g4ZfrHkzvF/mHieOBERY2ZIn2w0r+vo=";
+  :contractorID "c_d3d58b40-2f53-11ed-be7d-3f8589292a29";
+  :hasCompany "cm_c487000a-2851-11ed-ae8f-f11f24693005";
+  :hasVATIN "qyAJLSoQ6bjlzfrAZNp0+ws76/TlYaG70MrhgLvlQB8=" .
+
+:c_f6d1c10e-2f53-11ed-be7d-3f8589292a29 :hasCountry "oXQLrrlMyay0YmKpuz5BJf7/YXjR8q0aH2t6itmSuOQ=";
+  :hasCreationDate "2022-09-08 10:55:18.812675"^^xsd:dateTime;
+  :hasEmail "Zpfr7m6l1sBfCAuRHh2vxcUfM2RDKERXkS7HAC6HTv8qkiZRBSrscC6BCKMEZD9n";
+  :hasName "P05q8mL7i8xp5tICNQQcB084CwuCPgde2XbZhkqVE7Y=";
+  :hasPostalAddress "+QY2IO8RfZRpDbM5xZOklkVMjp7h0ZhP1DfjI7U8x1NF+tutcwU0Qwe1iFKCAdCPE2RdUEEFvpKbP0Rx6dscqw==";
+  :hasTelephone "KhiVg0WIPyEkYvf2u2Q96dUs6WN3J6tZVDopvz/Yp20=";
+  :hasTerritory "2IFwPjCQd0CFjbjMr4bBoClNxfrF4LB+7LF2UHD7xU0=";
+  :contractorID "c_f6d1c10e-2f53-11ed-be7d-3f8589292a29";
+  :hasCompany "cm_c487000a-2851-11ed-ae8f-f11f24693005";
+  :hasVATIN "+NFyEH6FQyJvft5/P1vu8f38QOyue+HHlHR9GYpfh9Q=" .
+
+:term_type_8cdb028c-2e96-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 18:45:05.054000+00:00"^^xsd:dateTime;
+  :hasName "LPUe8s/wl3j0KTGJf/t/n/19mNsByua5TEZZ8w8HmFo2/3w/2PPuoN2hQm3upmXWQNmh6VT5sSHL89UZf9Yeqw==";
+  :termTypeID "term_type_8cdb028c-2e96-11ed-be7d-3f8589292a29" .
+
+:term_b3dfd144-2e98-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 10:19:49.414000+00:00"^^xsd:dateTime;
+  :hasTermTypes "term_type_8cdb028c-2e96-11ed-be7d-3f8589292a29";
+  :hasObligations :ob_c115e70a-2e97-11ed-be7d-3f8589292a29, :ob_d1cf3f7e-2e97-11ed-be7d-3f8589292a29;
+  :termID "term_b3dfd144-2e98-11ed-be7d-3f8589292a29" .
+
+:term_d6562ebc-2e98-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 10:19:49.414000+00:00"^^xsd:dateTime;
+  :hasTermTypes "term_type_8cdb028c-2e96-11ed-be7d-3f8589292a29";
+  :hasObligations :ob_1e5293a0-2e98-11ed-be7d-3f8589292a29, :ob_2ad5cb10-2e98-11ed-be7d-3f8589292a29;
+  :termID "term_d6562ebc-2e98-11ed-be7d-3f8589292a29" .
+
+:sig_fe4e269a-2e98-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 10:36:08.668000+00:00"^^xsd:dateTime;
+  :contractorID "c_096dc6f4-2e97-11ed-be7d-3f8589292a29";
+  :hasSignature "iMmBd4hXNA+zU6yPxQGoLHBRY8KpjqW165vyjnpWevc=";
+  :signatureID "sig_fe4e269a-2e98-11ed-be7d-3f8589292a29" .
+
+:sig_0d930c10-2e99-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 10:36:08.668000+00:00"^^xsd:dateTime;
+  :contractorID "c_356d371c-2e97-11ed-be7d-3f8589292a29";
+  :hasSignature "qWWyMRi/UXs5AqzT8I5w9aw6dKDqBN0GYgi6Ox7zcI0=";
+  :signatureID "sig_0d930c10-2e99-11ed-be7d-3f8589292a29" .
+
+:sig_1c5e38e6-2e99-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 10:36:08.668000+00:00"^^xsd:dateTime;
+  :contractorID "c_6a094420-2e97-11ed-be7d-3f8589292a29";
+  :hasSignature "q7xTFZu4wrXFUk+fvuZZgZo99Hp89JmYkEWzs1FrNjY=";
+  :signatureID "sig_1c5e38e6-2e99-11ed-be7d-3f8589292a29" .
+
+:sig_86020f1a-2ed1-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 17:21:27.303000+00:00"^^xsd:dateTime;
+  :contractorID "c_729c70aa-2ed1-11ed-be7d-3f8589292a29";
+  :hasSignature "IHwV9FDRK0IDwU3BSJYSA4vMfTGrcMNoFlrnXBHTXxk=";
+  :signatureID "sig_86020f1a-2ed1-11ed-be7d-3f8589292a29" .
+
+:sig_94bb8c66-2ed1-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 17:21:27.303000+00:00"^^xsd:dateTime;
+  :contractorID "c_534882e8-2ed1-11ed-be7d-3f8589292a29";
+  :hasSignature "t9ODpiFhFrAL/b6AmKhZrQz8aO4erKhCfbq1SnbibRY=";
+  :signatureID "sig_94bb8c66-2ed1-11ed-be7d-3f8589292a29" .
+
+:sig_a433a476-2ed1-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 17:21:27.303000+00:00"^^xsd:dateTime;
+  :contractorID "c_32c4336e-2ed1-11ed-be7d-3f8589292a29";
+  :hasSignature "WhBJUuWVRE7lEayra4yZ6Ho1gH18fe3wwpch+3pXR70=";
+  :signatureID "sig_a433a476-2ed1-11ed-be7d-3f8589292a29" .
+
+:term_e73a4a6c-2ed2-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 17:29:57.487000+00:00"^^xsd:dateTime;
+  :hasTermTypes "term_type_8cdb028c-2e96-11ed-be7d-3f8589292a29";
+  :hasObligations :ob_91fae138-2ed2-11ed-be7d-3f8589292a29, :ob_9f218204-2ed2-11ed-be7d-3f8589292a29;
+  :termID "term_e73a4a6c-2ed2-11ed-be7d-3f8589292a29" .
+
+:term_e271c6de-2ed4-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 17:29:57.487000+00:00"^^xsd:dateTime;
+  :hasTermTypes "term_type_8cdb028c-2e96-11ed-be7d-3f8589292a29";
+  :hasObligations :ob_92c7a31a-2ed4-11ed-be7d-3f8589292a29, :ob_9e2bb1ce-2ed4-11ed-be7d-3f8589292a29;
+  :termID "term_e271c6de-2ed4-11ed-be7d-3f8589292a29" .
+
+:term_type_4412c812-2f51-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 18:45:05.054000+00:00"^^xsd:dateTime;
+  :hasName "j2GeTHPLv51ZAFMt/P8Z46rgHbhtAWQWMCukkOjILs92kh7PaWMgvBhIqbTZBFvb";
+  :termTypeID "term_type_4412c812-2f51-11ed-be7d-3f8589292a29" .
+
+:term_87edc15e-2f51-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 10:19:49.414000+00:00"^^xsd:dateTime;
+  :hasTermTypes "term_type_8cdb028c-2e96-11ed-be7d-3f8589292a29";
+  :hasObligations :ob_c115e70a-2e97-11ed-be7d-3f8589292a29, :ob_d1cf3f7e-2e97-11ed-be7d-3f8589292a29;
+  :termID "term_87edc15e-2f51-11ed-be7d-3f8589292a29" .
+
+:term_type_87f83652-2f51-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 18:45:05.054000+00:00"^^xsd:dateTime;
+  :hasName "qa7p5ZFuJn8srzpHhGmdxYT61+4aUg/9/OIjMPXV+lx3J6iVDrNTuSwt5R02RcvV";
+  :termTypeID "term_type_87f83652-2f51-11ed-be7d-3f8589292a29" .
+
+:term_20e73fb6-2f52-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 10:19:49.414000+00:00"^^xsd:dateTime;
+  :hasTermTypes "term_type_8cdb028c-2e96-11ed-be7d-3f8589292a29";
+  :hasObligations :ob_c115e70a-2e97-11ed-be7d-3f8589292a29, :ob_d1cf3f7e-2e97-11ed-be7d-3f8589292a29;
+  :termID "term_20e73fb6-2f52-11ed-be7d-3f8589292a29" .
+
+:term_type_20f1123e-2f52-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 18:45:05.054000+00:00"^^xsd:dateTime;
+  :hasName "RFL+aWn3dCUPeFGLxrtEfOnS7CUbwz11K413nlLGutwLSQLGDtCHa5GHfHC0GDWl";
+  :termTypeID "term_type_20f1123e-2f52-11ed-be7d-3f8589292a29" .
+
+:term_4276daf6-2f52-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 10:19:49.414000+00:00"^^xsd:dateTime;
+  :hasTermTypes "term_type_8cdb028c-2e96-11ed-be7d-3f8589292a29";
+  :hasObligations :ob_c115e70a-2e97-11ed-be7d-3f8589292a29, :ob_d1cf3f7e-2e97-11ed-be7d-3f8589292a29;
+  :termID "term_4276daf6-2f52-11ed-be7d-3f8589292a29" .
+
+:term_type_428125a6-2f52-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 18:45:05.054000+00:00"^^xsd:dateTime;
+  :hasName "WoGK2PBZHFjaU8WfglOpmn5tUNaTYddHnQnLW0EakvZnC4mr+LOeZZLdCf7ZEEQc";
+  :termTypeID "term_type_428125a6-2f52-11ed-be7d-3f8589292a29" .
+
+:term_b6a49864-2f52-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 10:19:49.414000+00:00"^^xsd:dateTime;
+  :hasTermTypes "term_type_8cdb028c-2e96-11ed-be7d-3f8589292a29";
+  :hasObligations :ob_c115e70a-2e97-11ed-be7d-3f8589292a29, :ob_d1cf3f7e-2e97-11ed-be7d-3f8589292a29;
+  :termID "term_b6a49864-2f52-11ed-be7d-3f8589292a29" .
+
+:term_type_b6afbdde-2f52-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 18:45:05.054000+00:00"^^xsd:dateTime;
+  :hasName "gshGFO6V4ZRZBEIJBYtbFsKqd9WBB+ifeNQ0xRGI7fvGlUmFnFenRaFN/O/xFxTe";
+  :termTypeID "term_type_b6afbdde-2f52-11ed-be7d-3f8589292a29" .
+
+:term_9c94d230-2f53-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 10:19:49.414000+00:00"^^xsd:dateTime;
+  :hasTermTypes "term_type_8cdb028c-2e96-11ed-be7d-3f8589292a29";
+  :hasObligations :ob_c115e70a-2e97-11ed-be7d-3f8589292a29, :ob_d1cf3f7e-2e97-11ed-be7d-3f8589292a29;
+  :termID "term_9c94d230-2f53-11ed-be7d-3f8589292a29" .
+
+:term_type_9c9dfd7e-2f53-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 18:45:05.054000+00:00"^^xsd:dateTime;
+  :hasName "tBGuiMVhFVQDzi3bMPZwwh2iTGXev0aodqaxObRvzvN+s1wf2EkHrbCnitoZ1COi";
+  :termTypeID "term_type_9c9dfd7e-2f53-11ed-be7d-3f8589292a29" .
+
+:term_ae06c118-2f53-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 10:19:49.414000+00:00"^^xsd:dateTime;
+  :hasTermTypes "term_type_8cdb028c-2e96-11ed-be7d-3f8589292a29";
+  :hasObligations :ob_c115e70a-2e97-11ed-be7d-3f8589292a29, :ob_d1cf3f7e-2e97-11ed-be7d-3f8589292a29;
+  :termID "term_ae06c118-2f53-11ed-be7d-3f8589292a29" .
+
+:term_type_ae12c9d6-2f53-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 18:45:05.054000+00:00"^^xsd:dateTime;
+  :hasName "/k+G1AFUKm1+EgBY3QzC+l+vPf+jLAZco7Vp0d8gdBmFhrCiXKwjEed4NloWgRhC";
+  :termTypeID "term_type_ae12c9d6-2f53-11ed-be7d-3f8589292a29" .
+
+:term_d3ce13c4-2f53-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 10:19:49.414000+00:00"^^xsd:dateTime;
+  :hasTermTypes "term_type_8cdb028c-2e96-11ed-be7d-3f8589292a29";
+  :hasObligations :ob_c115e70a-2e97-11ed-be7d-3f8589292a29, :ob_d1cf3f7e-2e97-11ed-be7d-3f8589292a29;
+  :termID "term_d3ce13c4-2f53-11ed-be7d-3f8589292a29" .
+
+:term_type_d3e613ca-2f53-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 18:45:05.054000+00:00"^^xsd:dateTime;
+  :hasName "9JaYYriAUbC8chKRpGtEV3jO5ZhwYPs2bRM87qxAhM41YlpFPFVrFfrEft0rvC40";
+  :termTypeID "term_type_d3e613ca-2f53-11ed-be7d-3f8589292a29" .
+
+:term_f6c929fe-2f53-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 10:19:49.414000+00:00"^^xsd:dateTime;
+  :hasTermTypes "term_type_8cdb028c-2e96-11ed-be7d-3f8589292a29";
+  :hasObligations :ob_c115e70a-2e97-11ed-be7d-3f8589292a29, :ob_d1cf3f7e-2e97-11ed-be7d-3f8589292a29;
+  :termID "term_f6c929fe-2f53-11ed-be7d-3f8589292a29" .
+
+:term_type_f6e448c4-2f53-11ed-be7d-3f8589292a29 :hasCreationDate "2022-09-07 18:45:05.054000+00:00"^^xsd:dateTime;
+  :hasName "TEZ/qJGCNjZOnaFwp4AXbYvGm32QnmDkjhb3sKGZi4zwW/OChPDy2WNfMU2t6ZXz";
+  :termTypeID "term_type_f6e448c4-2f53-11ed-be7d-3f8589292a29" .
+
+:term_type_b00d9f78-56d0-11ed-8ce7-bb796b1450fe :hasCreationDate "2022-10-28 14:47:36.919000+00:00"^^xsd:dateTime;
+  :hasName "X7f0GoohGZqWMoqoQ+QPjrl6LsY7B9fUR84lCuAPY30=";
+  :termTypeID "term_type_b00d9f78-56d0-11ed-8ce7-bb796b1450fe" .
+
+:term_type_ec0a2c94-56d0-11ed-8ce7-bb796b1450fe :hasCreationDate "2022-10-28 14:47:36.919000+00:00"^^xsd:dateTime;
+  :hasName "ViEWSpUyoZRXNXnX02TtljPHJtysZma8B3zYUxEMSyQ=";
+  :termTypeID "term_type_ec0a2c94-56d0-11ed-8ce7-bb796b1450fe" .
+
+:term_type_0bc0702a-56d1-11ed-8ce7-bb796b1450fe :hasCreationDate "2022-10-28 14:47:36.919000+00:00"^^xsd:dateTime;
+  :hasName "Mv2+OhBxe0U3yw813Kz9iOfb1+IDKiNrr2dGTYM32vk=";
+  :termTypeID "term_type_0bc0702a-56d1-11ed-8ce7-bb796b1450fe" .
+
+:term_type_88d09018-56d1-11ed-8ce7-bb796b1450fe :hasCreationDate "2022-10-28 14:47:36.919000+00:00"^^xsd:dateTime;
+  :hasName "gteZeB7FkSEGbVGlfJEmb34nVlh2NCUwvvSIBJRc/CU=";
+  :termTypeID "term_type_88d09018-56d1-11ed-8ce7-bb796b1450fe" .
+
+:term_type_b7c0258e-56d4-11ed-8ce7-bb796b1450fe :hasCreationDate "2022-10-28 14:47:36.919000+00:00"^^xsd:dateTime;
+  :hasName "gDDjkO5sp606l/KcJKdYKxy6JcDRwGxrvwL7VJFeD4c=";
+  :termTypeID "term_type_b7c0258e-56d4-11ed-8ce7-bb796b1450fe" .
+
+:term_type_02627664-56d5-11ed-8ce7-bb796b1450fe :hasCreationDate "2022-10-28 14:47:36.919000+00:00"^^xsd:dateTime;
+  :hasName "Fow5UwMxpCkWCU5lRcgYdom8UTkKaAeY06yzfRGzRaI=";
+  :termTypeID "term_type_02627664-56d5-11ed-8ce7-bb796b1450fe" .
+
+:term_type_470a63c6-56d5-11ed-8ce7-bb796b1450fe :hasCreationDate "2022-10-28 15:29:08.070000+00:00"^^xsd:dateTime;
+  :hasName "Y2fHeUnxG3nxQTRZuxI4bBYm7j/PFqYZcnc8XJnlFmA=";
+  :termTypeID "term_type_470a63c6-56d5-11ed-8ce7-bb796b1450fe" .
+
+:term_type_7456ed40-56d5-11ed-8ce7-bb796b1450fe :hasCreationDate "2022-10-28 15:29:08.070000+00:00"^^xsd:dateTime;
+  :hasName "gVEZLxgs743W5aIbJvkfTV1hpe0NRcpNgayTfPsMUhI=";
+  :termTypeID "term_type_7456ed40-56d5-11ed-8ce7-bb796b1450fe" .
+
+:term_type_a6d76ed4-56d5-11ed-8ce7-bb796b1450fe :hasCreationDate "2022-10-28 15:29:08.070000+00:00"^^xsd:dateTime;
+  :hasName "/sOHkriFFcTHRWeWirOE85JLRq7BF6p4ybtUKGJS4u8=";
+  :termTypeID "term_type_a6d76ed4-56d5-11ed-8ce7-bb796b1450fe" .
+
+:term_type_124266c4-56d6-11ed-8ce7-bb796b1450fe :hasCreationDate "2022-10-28 15:29:08.070000+00:00"^^xsd:dateTime;
+  :hasName "jtTlOgdNhdHAiWBD5bRK/GJaDPpOiuXb9gMloZ+VpIQ=";
+  :termTypeID "term_type_124266c4-56d6-11ed-8ce7-bb796b1450fe" .
+
+:term_type_4dcf012a-56d6-11ed-8ce7-bb796b1450fe :hasCreationDate "2022-10-28 15:29:08.070000+00:00"^^xsd:dateTime;
+  :hasName "xx4k0aA8soGgXlqOLW65lqLXb+ERkLA0Rd33EpLQGBA=";
+  :termTypeID "term_type_4dcf012a-56d6-11ed-8ce7-bb796b1450fe" .
+
+:term_type_75cfc97a-56d6-11ed-8ce7-bb796b1450fe :hasCreationDate "2022-10-28 15:29:08.070000+00:00"^^xsd:dateTime;
+  :hasName "vrBkLuwJ2HtY7jwzwiZ3jd7pQkFsRMOSL96QqICuHys=";
+  :termTypeID "term_type_75cfc97a-56d6-11ed-8ce7-bb796b1450fe" .
+
+:term_type_a339c07a-56d9-11ed-bdc0-6dbbddf017b8 :hasCreationDate "2022-10-28 15:59:22.788000+00:00"^^xsd:dateTime;
+  :hasName "5gB5nhuLlJkQJomMMSqRHT0fUxVsVfh8MhjQ0etO7LM=";
+  :termTypeID "term_type_a339c07a-56d9-11ed-bdc0-6dbbddf017b8" .
+
+:term_type_d1e72e62-56d9-11ed-bdc0-6dbbddf017b8 :hasCreationDate "2022-10-28 15:59:22.788000+00:00"^^xsd:dateTime;
+  :hasName "tKRcZ778gyZW8dU6YaLedYPfkAVROxn9iS0LetmWBwk=";
+  :termTypeID "term_type_d1e72e62-56d9-11ed-bdc0-6dbbddf017b8" .
+
+:term_type_e40a93cc-56d9-11ed-bdc0-6dbbddf017b8 :hasCreationDate "2022-10-28 15:59:22.788000+00:00"^^xsd:dateTime;
+  :hasName "QgHlvSaDfpfVaLvb02CMvB+/iP4drqR6YdSOwOK9DLc=";
+  :termTypeID "term_type_e40a93cc-56d9-11ed-bdc0-6dbbddf017b8" .
+
+:term_type_0f46265a-56da-11ed-bdc0-6dbbddf017b8 :hasCreationDate "2022-10-28 15:59:22.788000+00:00"^^xsd:dateTime;
+  :hasName "p3plVLhWkty8PDzjVX9yAqv55rvNXzQcbsxltkX3oO0=";
+  :termTypeID "term_type_0f46265a-56da-11ed-bdc0-6dbbddf017b8" .
+
+:term_type_21b7ed32-56da-11ed-bdc0-6dbbddf017b8 :hasCreationDate "2022-10-28 15:59:22.788000+00:00"^^xsd:dateTime;
+  :hasName "n/+FQi8BN1Fec9FeSok9Gx8yTqSnIkuRCJywspixLdY=";
+  :termTypeID "term_type_21b7ed32-56da-11ed-bdc0-6dbbddf017b8" .
+
+:term_type_47086580-56da-11ed-bdc0-6dbbddf017b8 :hasCreationDate "2022-10-28 15:59:22.788000+00:00"^^xsd:dateTime;
+  :hasName "4o8BLYItoRa9jZgE+Y20+PV/KS1VQwDH8pGJ7TUFca8=";
+  :termTypeID "term_type_47086580-56da-11ed-bdc0-6dbbddf017b8" .
+
+:term_type_6588ca4a-56da-11ed-bdc0-6dbbddf017b8 :hasCreationDate "2022-10-28 15:59:22.788000+00:00"^^xsd:dateTime;
+  :hasName "yoqJ8SKowS+NfPAzsdkT94l+o1tTpwOIAlEWJzbA5T8=";
+  :termTypeID "term_type_6588ca4a-56da-11ed-bdc0-6dbbddf017b8" .
+
+:term_type_7e8732a6-56db-11ed-bdc0-6dbbddf017b8 :hasCreationDate "2022-10-28 15:59:22.788000+00:00"^^xsd:dateTime;
+  :hasName "HTkPZOB0XExBqBpKc4Gsic1GTRkreGCLBI6iO3FUj74=";
+  :termTypeID "term_type_7e8732a6-56db-11ed-bdc0-6dbbddf017b8" .
+
+:term_type_8ae69a3c-56db-11ed-bdc0-6dbbddf017b8 :hasCreationDate "2022-10-28 15:59:22.788000+00:00"^^xsd:dateTime;
+  :hasName "jwgUlmcCzV4G1yGcV7h4bBLcbcVVdBAY63M7qVm61pc=";
+  :termTypeID "term_type_8ae69a3c-56db-11ed-bdc0-6dbbddf017b8" .
+
+:term_type_cea23dc6-56db-11ed-bdc0-6dbbddf017b8 :hasCreationDate "2022-10-28 15:59:22.788000+00:00"^^xsd:dateTime;
+  :hasName "lwz33LaSe8y8W0SQFNX8xTUdjA04k+C1D9crCjXiw6A=";
+  :termTypeID "term_type_cea23dc6-56db-11ed-bdc0-6dbbddf017b8" .
+
+:term_type_dacd971c-56db-11ed-bdc0-6dbbddf017b8 :hasCreationDate "2022-10-28 15:59:22.788000+00:00"^^xsd:dateTime;
+  :hasName "V58Kbw++53uH42RX/HetLOxedhXnVBv+wyPrCRMtJaM=";
+  :termTypeID "term_type_dacd971c-56db-11ed-bdc0-6dbbddf017b8" .
+
+:term_type_0a8a60b6-56dc-11ed-bdc0-6dbbddf017b8 :hasCreationDate "2022-10-28 15:59:22.788000+00:00"^^xsd:dateTime;
+  :hasName "pD1jFxC7Z3j5Wa218U9XyRQx30gcjtCHmGoXslQMovo=";
+  :termTypeID "term_type_0a8a60b6-56dc-11ed-bdc0-6dbbddf017b8" .
+
+:term_type_0f75d8e4-56dc-11ed-bdc0-6dbbddf017b8 :hasCreationDate "2022-10-28 15:59:22.788000+00:00"^^xsd:dateTime;
+  :hasName "AhvHNtKFPQylAUh1zEFkYbUAj9Qh5AE9MjIED+Gvm+4=";
+  :termTypeID "term_type_0f75d8e4-56dc-11ed-bdc0-6dbbddf017b8" .
+
+:term_type_1d8b0148-56dc-11ed-bdc0-6dbbddf017b8 :hasCreationDate "2022-10-28 15:59:22.788000+00:00"^^xsd:dateTime;
+  :hasName "9W1CoPVX1LSi281Ylk76mrROFjyYsB3p4/IHSv3cva0=";
+  :termTypeID "term_type_1d8b0148-56dc-11ed-bdc0-6dbbddf017b8" .
+
+:term_type_416e4ec6-56dc-11ed-bdc0-6dbbddf017b8 :hasCreationDate "2022-10-28 15:59:22.788000+00:00"^^xsd:dateTime;
+  :hasName "KLWgJd8uUJQ61PzGSgn55xXPTeyWvY4OqRWtTUvG+b4=";
+  :termTypeID "term_type_416e4ec6-56dc-11ed-bdc0-6dbbddf017b8" .
+
+:term_type_5c2fb628-56dc-11ed-bdc0-6dbbddf017b8 :hasCreationDate "2022-10-28 15:59:22.788000+00:00"^^xsd:dateTime;
+  :hasName "7F0pR39sDMf1Zd50qfBO3jLEfgrGyplMW/qfX8WDaOU=";
+  :termTypeID "term_type_5c2fb628-56dc-11ed-bdc0-6dbbddf017b8" .
+
+:term_type_a994f1ee-56dc-11ed-bdc0-6dbbddf017b8 :hasCreationDate "2022-10-28 15:59:22.788000+00:00"^^xsd:dateTime;
+  :hasName "1ZEM2sXQQKIC9+M2SSwtFw1HRL5pBfsYKz9zGmh+4bA=";
+  :termTypeID "term_type_a994f1ee-56dc-11ed-bdc0-6dbbddf017b8" .
+
+:term_d520e94e-a303-11ed-b1bc-0b613fb8badf :hasCreationDate "2023-02-02 14:25:14.692000+00:00"^^xsd:dateTime;
+  :hasTermTypes "term_type_8cdb028c-2e96-11ed-be7d-3f8589292a29";
+  :hasObligations :ob_28583404-a305-11ed-b1bc-0b613fb8badf, :ob_4a939d88-a305-11ed-b1bc-0b613fb8badf;
+  :termID "term_d520e94e-a303-11ed-b1bc-0b613fb8badf" .
+
+:ob_c115e70a-2e97-11ed-be7d-3f8589292a29 :hasEndDate "2023-07-07 10:25:52.749000+00:00"^^xsd:dateTime;
+  :hasStates :stateInvalid;
+  :contractorID "c_6a094420-2e97-11ed-be7d-3f8589292a29";
+  :obligationID "ob_c115e70a-2e97-11ed-be7d-3f8589292a29";
+  :fulfillmentDate "2022-09-07 10:25:52.749000+00:00"^^xsd:dateTime;
+  :hasContractIdB2C "" .
+
+:ob_d1cf3f7e-2e97-11ed-be7d-3f8589292a29 :hasEndDate "2023-07-07 10:25:52.749000+00:00"^^xsd:dateTime;
+  :hasStates :statePending;
+  :contractorID "c_356d371c-2e97-11ed-be7d-3f8589292a29";
+  :obligationID "ob_d1cf3f7e-2e97-11ed-be7d-3f8589292a29";
+  :fulfillmentDate "2022-09-07 10:25:52.749000+00:00"^^xsd:dateTime;
+  :hasContractIdB2C "" .
+
+:ob_1e5293a0-2e98-11ed-be7d-3f8589292a29 :hasEndDate "2023-07-07 10:25:52.749000+00:00"^^xsd:dateTime;
+  :hasStates :stateViolated;
+  :contractorID "c_356d371c-2e97-11ed-be7d-3f8589292a29";
+  :obligationID "ob_1e5293a0-2e98-11ed-be7d-3f8589292a29";
+  :fulfillmentDate "2022-09-07 10:25:52.749000+00:00"^^xsd:dateTime;
+  :hasContractIdB2C "" .
+
+:ob_2ad5cb10-2e98-11ed-be7d-3f8589292a29 :hasEndDate "2023-07-07 10:25:52.749000+00:00"^^xsd:dateTime;
+  :hasStates :statePending;
+  :contractorID "c_096dc6f4-2e97-11ed-be7d-3f8589292a29";
+  :obligationID "ob_2ad5cb10-2e98-11ed-be7d-3f8589292a29";
+  :fulfillmentDate "2022-09-07 10:25:52.749000+00:00"^^xsd:dateTime;
+  :hasContractIdB2C "" .
+
+
+:BusinessToBusiness owl:disjointWith :BusinessToConsumer .
+
+:Obligation owl:disjointWith :TermTypes .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-8218BA8C5B17EABB43A933E2212CE027 owl:onProperty
+    :licenseID;
+  owl:someValuesFrom rdf:PlainLiteral .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-84B0E2B5D234F154D114B69FE469D345 owl:onProperty
+    :contractID;
+  owl:someValuesFrom rdf:PlainLiteral .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-7B902477E03EDF0B0024893F619287D5 owl:onProperty
+    :consentID;
+  owl:someValuesFrom rdf:PlainLiteral .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-4ED805AFF8D8E9A153514F276762DE35 owl:onProperty
+    :agentID;
+  owl:someValuesFrom rdf:PlainLiteral .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-26FD455F9C72A7918658E35A81FCF5C5 owl:onProperty
+    dct:format;
+  owl:someValuesFrom xsd:dateTimeStamp .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-2331393FAB9AD1F3127662DCA63FF0E5 owl:onProperty
+    dct:format;
+  owl:someValuesFrom rdf:PlainLiteral .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-4CE6645106839567F07B9C6195E69EB1 owl:onProperty
+    dct:format;
+  owl:someValuesFrom rdf:PlainLiteral .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-3088DD894409457B7D6DFA816987CD8E owl:onProperty
+    dct:format;
+  owl:someValuesFrom rdf:PlainLiteral .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-13A2E6D50C2121394F4F068A71538362 owl:onProperty
+    dct:format;
+  owl:someValuesFrom xsd:integer .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-3BC221D2C77A8EC0194ABA8B1C0DFF2A owl:onProperty
+    dct:format;
+  owl:someValuesFrom rdf:PlainLiteral .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-EA0EB2989D595D099A892A83DBEA5499 owl:onProperty
+    LCC:hasLatitude;
+  owl:someValuesFrom xsd:integer .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-C1804C5526C71D298BEF7357F9D032A1 owl:onProperty
+    LCC:hasLongitude;
+  owl:someValuesFrom xsd:integer .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-8F45528F9178E716F8C9C65EAF0D7E4B owl:onProperty
+    dct:format;
+  owl:someValuesFrom xsd:string .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-6F5C7CA3D8F0FCA3A688B87CE9E12C72 owl:onProperty
+    dct:format;
+  owl:someValuesFrom rdf:PlainLiteral .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-403417950F6BBF7DD8680337A4777406 owl:onProperty
+    dct:issued;
+  owl:someValuesFrom xsd:dateTimeStamp .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-AE1B5C6984C82753FB9170963AA18076 owl:onProperty
+    dct:format;
+  owl:someValuesFrom rdf:PlainLiteral .
+
+_:genid-38c8e593e8ee47b0ad42951ef6ef51fb932-1A2A774B8FF22BFC556901639AE7B2BD owl:onProperty
+    dct:format;
+  owl:someValuesFrom xsd:dateTimeStamp .
